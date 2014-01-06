@@ -270,7 +270,6 @@ features[variable][] = pathauto_transliterate
 features[variable][] = pathauto_user_pattern
 features[variable][] = pathauto_verbose
 features[variable][] = site_default_country
-features[variable][] = site_frontpage
 features[variable][] = site_name
 features[variable][] = theme_skeidgnup_theme_settings
 project path = profiles/skeidgnup/modules/custom/municipality_app
