@@ -255,6 +255,7 @@ features[variable][] = pathauto_user_pattern
 features[variable][] = pathauto_verbose
 features[variable][] = site_default_country
 features[variable][] = site_name
+features[variable][] = taxonomy_menu_vocab_menu_category
 features[variable][] = theme_skeidgnup_theme_settings
 features_exclude[variable][comment_anonymous_committees] = comment_anonymous_committees
 features_exclude[variable][comment_anonymous_info_pages] = comment_anonymous_info_pages
