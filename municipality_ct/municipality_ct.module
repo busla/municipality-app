@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Efnistípur feature.
+ */
+
+include_once 'municipality_ct.features.inc';
