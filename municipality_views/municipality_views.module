@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stýringar feature.
+ */
+
+include_once 'municipality_views.features.inc';

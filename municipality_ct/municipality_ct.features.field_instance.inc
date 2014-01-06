@@ -10,6 +10,253 @@
 function municipality_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'file-image-field_file_image_alt_text'
+  $field_instances['file-image-field_file_image_alt_text'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'half_screen' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'slides' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_file_image_alt_text',
+    'label' => 'Alt Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -4,
+    ),
+  );
+
+  // Exported field_instance: 'file-image-field_file_image_tags'
+  $field_instances['file-image-field_file_image_tags'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Merktu myndina eftir aðstæðum. Hægt er að setja fleiri en eina merkingu.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'half_screen' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'slides' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_file_image_tags',
+    'label' => 'Merkingar',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => -2,
+    ),
+  );
+
+  // Exported field_instance: 'file-image-field_file_image_title_text'
+  $field_instances['file-image-field_file_image_title_text'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'half_screen' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'slides' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_file_image_title_text',
+    'label' => 'Title Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -3,
+    ),
+  );
+
+  // Exported field_instance: 'node-blog-body'
+  $field_instances['node-blog-body'] = array(
+    'bundle' => 'blog',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-committees-field_board_members'
   $field_instances['node-committees-field_board_members'] = array(
     'bundle' => 'committees',
@@ -1431,17 +1678,386 @@ function municipality_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'relation-committee_members-endpoints'
+  $field_instances['relation-committee_members-endpoints'] = array(
+    'bundle' => 'committee_members',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'relation_endpoint',
+        'settings' => array(
+          'view_modes' => array(
+            'comment' => 'default',
+            'file' => 'default',
+            'node' => 'default',
+            'relation' => 'default',
+            'taxonomy_term' => 'default',
+            'taxonomy_vocabulary' => 'default',
+            'user' => 'default',
+          ),
+        ),
+        'type' => 'relation_endpoint',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'endpoints',
+    'label' => 'endpoints',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'relation_endpoint',
+      'settings' => array(),
+      'type' => 'relation_endpoint',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'relation-committee_members-field_job_title'
+  $field_instances['relation-committee_members-field_job_title'] = array(
+    'bundle' => 'committee_members',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'field_job_title',
+    'label' => 'Starfsheiti',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 1,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'relation-committee_members-field_party'
+  $field_instances['relation-committee_members-field_party'] = array(
+    'bundle' => 'committee_members',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Veldu lista ef við á.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'field_party',
+    'label' => 'Listi',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 1,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'relation-contact-endpoints'
+  $field_instances['relation-contact-endpoints'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'relation_endpoint',
+        'settings' => array(
+          'view_modes' => array(
+            'comment' => 'default',
+            'file' => 'default',
+            'node' => 'default',
+            'relation' => 'default',
+            'taxonomy_term' => 'default',
+            'taxonomy_vocabulary' => 'default',
+            'user' => 'default',
+          ),
+        ),
+        'type' => 'relation_endpoint',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'endpoints',
+    'label' => 'endpoints',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'relation_endpoint',
+      'settings' => array(),
+      'type' => 'relation_endpoint',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'relation-nefnd-endpoints'
+  $field_instances['relation-nefnd-endpoints'] = array(
+    'bundle' => 'nefnd',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'relation_endpoint',
+        'settings' => array(
+          'view_modes' => array(
+            'comment' => 'default',
+            'file' => 'default',
+            'node' => 'default',
+            'relation' => 'default',
+            'taxonomy_term' => 'default',
+            'taxonomy_vocabulary' => 'default',
+            'user' => 'default',
+          ),
+        ),
+        'type' => 'relation_endpoint',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'endpoints',
+    'label' => 'endpoints',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'relation_endpoint',
+      'settings' => array(),
+      'type' => 'relation_endpoint',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'relation-reports-endpoints'
+  $field_instances['relation-reports-endpoints'] = array(
+    'bundle' => 'reports',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'relation_endpoint',
+        'settings' => array(
+          'view_modes' => array(
+            'comment' => 'default',
+            'file' => 'default',
+            'node' => 'default',
+            'relation' => 'default',
+            'taxonomy_term' => 'default',
+            'taxonomy_vocabulary' => 'default',
+            'user' => 'default',
+          ),
+        ),
+        'type' => 'relation_endpoint',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'endpoints',
+    'label' => 'endpoints',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'relation_endpoint',
+      'settings' => array(),
+      'type' => 'relation_endpoint',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'relation-staff-endpoints'
+  $field_instances['relation-staff-endpoints'] = array(
+    'bundle' => 'staff',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'relation_endpoint',
+        'settings' => array(
+          'view_modes' => array(
+            'comment' => 'default',
+            'file' => 'default',
+            'node' => 'default',
+            'relation' => 'default',
+            'taxonomy_term' => 'default',
+            'taxonomy_vocabulary' => 'default',
+            'user' => 'default',
+          ),
+        ),
+        'type' => 'relation_endpoint',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'endpoints',
+    'label' => 'endpoints',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'relation_endpoint',
+      'settings' => array(),
+      'type' => 'relation_endpoint',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'relation-staff-field_job_title'
+  $field_instances['relation-staff-field_job_title'] = array(
+    'bundle' => 'staff',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Veldu starfsheiti',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'field_job_title',
+    'label' => 'Starfsheiti',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 1,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'relation-staff-field_period'
+  $field_instances['relation-staff-field_period'] = array(
+    'bundle' => 'staff',
+    'deleted' => 0,
+    'description' => 'Tímabil í starfi.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'relation',
+    'field_name' => 'field_period',
+    'label' => 'Tímabil',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 4,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Alt Text');
+  t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
   t('Aukaefni sem fylgir fundargerð.');
+  t('Body');
   t('Flokkur');
   t('Hlekkir');
   t('Hlekkur');
   t('Hægt er að skrá fleiri en eitt netfang.');
   t('Innihald');
   t('Innihald fundargerðar');
+  t('Listi');
   t('Lýsing');
   t('Meginmál');
+  t('Merkingar');
+  t('Merktu myndina eftir aðstæðum. Hægt er að setja fleiri en eina merkingu.');
   t('Mynd');
   t('Myndir');
   t('Myndir af staðnum.');
@@ -1454,13 +2070,17 @@ function municipality_ct_field_default_field_instances() {
   t('Settu skrár með síðunni.');
   t('Skrifaðu meginmál hér.');
   t('Skráðu tímasetningar ef það á við.');
+  t('Starfsheiti');
   t('Stillingar');
   t('Stillingar með færslu. ');
   t('Stutt lýsing á hlutverki nefndar.');
   t('Stutt ágrip.');
   t('Símanúmer starfsmanns');
   t('Sími');
+  t('Title Text');
+  t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Tímabil');
+  t('Tímabil í starfi.');
   t('Tímasetningar');
   t('Um nefndina');
   t('Um starfsmann');
@@ -1469,11 +2089,14 @@ function municipality_ct_field_default_field_instances() {
   t('Veldu flokk fyrir efnið. ');
   t('Veldu flokk fyrir síðuna. Hægt er að búa til undirflokka.');
   t('Veldu flokk.');
+  t('Veldu lista ef við á.');
   t('Veldu mynd.');
   t('Veldu nefnd sem skilaði inn fundargerð.');
   t('Veldu nefndarmenn.');
+  t('Veldu starfsheiti');
   t('Veldu tímabilið sem nefndin starfar. Ef þú veist ekki dagsetninguna sem hún var skipuð þá velurðu fyrsta dag mánaðarins.');
   t('Viðhengi');
+  t('endpoints');
   t('Ítarlegur texti um síðuna.');
 
   return $field_instances;
