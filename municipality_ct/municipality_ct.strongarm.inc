@@ -1605,6 +1605,20 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_term_item_description_category';
+  $strongarm->value = 0;
+  $export['taxonomy_menu_term_item_description_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_term_item_description_municipality_settings';
+  $strongarm->value = 0;
+  $export['taxonomy_menu_term_item_description_municipality_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'taxonomy_menu_vocab_menu_category';
   $strongarm->value = 'main-menu';
   $export['taxonomy_menu_vocab_menu_category'] = $strongarm;
@@ -1615,6 +1629,55 @@ function municipality_ct_strongarm() {
   $strongarm->name = 'taxonomy_menu_vocab_menu_municipality_settings';
   $strongarm->value = '0';
   $export['taxonomy_menu_vocab_menu_municipality_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_vocab_parent_category';
+  $strongarm->value = '0';
+  $export['taxonomy_menu_vocab_parent_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_vocab_parent_settings';
+  $strongarm->value = '0';
+  $export['taxonomy_menu_vocab_parent_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_voc_item_category';
+  $strongarm->value = FALSE;
+  $export['taxonomy_menu_voc_item_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_voc_item_description_category';
+  $strongarm->value = 0;
+  $export['taxonomy_menu_voc_item_description_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_voc_item_settings';
+  $strongarm->value = FALSE;
+  $export['taxonomy_menu_voc_item_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_voc_name_category';
+  $strongarm->value = FALSE;
+  $export['taxonomy_menu_voc_name_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_voc_name_settings';
+  $strongarm->value = FALSE;
+  $export['taxonomy_menu_voc_name_settings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
