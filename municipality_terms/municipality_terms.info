@@ -1,0 +1,10 @@
+name = Flokkar
+description = Inniheldur flokka sem koma með útgáfunni. Flokkarnir eru sérstaklega settir upp fyrir hvert verkefni.
+core = 7.x
+
+package = Hreppur
+
+files[] = municipality_terms.module
+files[] = municipality_terms.install
+
+dependencies[] = municipality_ct

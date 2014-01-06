@@ -1,0 +1,70 @@
+<?php
+
+/**
+* Implements hook_install().
+*/
+
+function municipality_terms_enable() {
+  $vocab_settings = taxonomy_vocabulary_machine_name_load('settings');
+  $vocab_category = taxonomy_vocabulary_machine_name_load('category');
+
+  $terms = array (
+          array(
+            'name' => t('Fésið'),
+            'vid' => $vocab_settings->vid,            
+          ),
+          array(
+            'name' => t('Laus störf'),
+            'vid' => $vocab_settings->vid,
+          ),
+          array(
+            'name' => t('Fréttabréf'),
+            'vid' => $vocab_settings->vid,
+          ),
+          array(
+            'name' => t('Fréttir'),
+            'vid' => $vocab_category->vid,            
+          ),
+          array(
+            'name' => t('Stjórnkerfið'),
+            'vid' => $vocab_category->vid,            
+              'children' => array(
+                array('name' => t('Sveitastjórn')),
+                array('name' => t('Nefndir')),
+                array('name' => t('Fundargerðir')),            
+              ),
+          ),
+          array(
+            'name' => t('Þjónusta'),
+            'vid' => $vocab_category->vid,
+              'children' => array(
+                array('name' => t('Öll þjónusta')),
+              ),
+          ),
+          array(
+            'name' => t('Athyglisvert'),
+            'vid' => $vocab_category->vid,
+          ),
+  );
+  
+    $child_list = array();
+    foreach ($terms as $t) { 
+      $t['description'] = 'Breyttu þessum texta með því að færa músina yfir á tannhjólið hægra meginn og smella á "Breyta"';
+      $term = (object) $t;
+      taxonomy_term_save($term);
+          if (!empty($t['children'])) {
+            foreach ($t['children'] as $c) {
+              $c['parent'] = $term->tid;
+              $c['vid'] = $term->vid;
+              $c['description'] = $term->description;
+              array_push($child_list, $c);         
+            }
+          }
+    }
+    
+    foreach($child_list as $child) {
+      $child = (object) $child;
+      taxonomy_term_save($child);
+    }    
+    
+}
