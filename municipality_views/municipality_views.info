@@ -7,6 +7,7 @@ project = municipality_views
 dependencies[] = bootstrap_panels_horizontal_tabs
 dependencies[] = ctools
 dependencies[] = gmap
+dependencies[] = municipality_ct
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = strongarm

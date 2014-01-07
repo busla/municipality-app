@@ -7,4 +7,4 @@ package = Hreppur
 files[] = municipality_terms.module
 files[] = municipality_terms.install
 
-dependencies[] = municipality_ct
+dependencies[] = municipality_app

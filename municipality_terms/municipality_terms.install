@@ -24,12 +24,10 @@ function municipality_terms_enable() {
           array(
             'name' => t('Fréttir'),
             'vid' => $vocab_category->vid, 
-            'weight' => 0,
           ),
           array(
             'name' => t('Stjórnkerfið'),
-            'vid' => $vocab_category->vid, 
-            'weight' => 1,           
+            'vid' => $vocab_category->vid,
               'children' => array(
                 array('name' => t('Sveitastjórn')),
                 array('name' => t('Nefndir')),
@@ -39,7 +37,6 @@ function municipality_terms_enable() {
           array(
             'name' => t('Þjónusta'),
             'vid' => $vocab_category->vid,
-            'weight' => 2,
               'children' => array(
                 array('name' => t('Öll þjónusta')),
               ),
@@ -47,7 +44,6 @@ function municipality_terms_enable() {
           array(
             'name' => t('Athyglisvert'),
             'vid' => $vocab_category->vid,
-            'weight' => 3,
           ),
   );
   
