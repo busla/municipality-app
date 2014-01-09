@@ -164,26 +164,6 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__info_pages';
-  $strongarm->value = array(
-    'view_modes' => array(),
-    'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
-          'weight' => '1',
-        ),
-      ),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_node__info_pages'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__place';
   $strongarm->value = array(
     'view_modes' => array(),
@@ -448,7 +428,7 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'gmap_marker_file';
-  $strongarm->value = '6';
+  $strongarm->value = '1';
   $export['gmap_marker_file'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1381,13 +1361,6 @@ function municipality_ct_strongarm() {
   $strongarm->name = 'node_preview_committees';
   $strongarm->value = '0';
   $export['node_preview_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_info_pages';
-  $strongarm->value = '0';
-  $export['node_preview_info_pages'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
