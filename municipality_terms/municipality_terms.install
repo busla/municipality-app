@@ -7,6 +7,7 @@
 function municipality_terms_enable() {
   $vocab_settings = taxonomy_vocabulary_machine_name_load('settings');
   $vocab_category = taxonomy_vocabulary_machine_name_load('category');
+  $vocab_committee = taxonomy_vocabulary_machine_name_load('committee');
 
   $terms = array (
           array(
@@ -45,6 +46,86 @@ function municipality_terms_enable() {
             'name' => t('Athyglisvert'),
             'vid' => $vocab_category->vid,
           ),
+          array(
+            'name' => t('Hreppsnefnd'),
+        ),  'vid' => $vocab_committee->vid,      
+        array(
+            'name' => t('Skólanefnd'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Umhverfisnefnd'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Almannavarnanefnd'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Skipulags og byggingarnefnd'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Brunavarnarnefnd'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Hússtjórn Þjóðveldisbæjar'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Landsþing SÍS'),
+            'vid' => $vocab_committee->vid,
+        ), 
+        array(
+            'name' => t('Ráðgjafanefnd um friðun Þjórsárvera'),
+            'vid' => $vocab_committee->vid,
+        ),
+        array(
+            'name' => t('Fræðslunefnd Flúðaskóla'),
+            'vid' => $vocab_committee->vid,
+        ),         
+        array(
+            'name' => t('Atvinnu, fjarskipta og samgöngunefnd'),
+            'vid' => $vocab_committee->vid,
+        ),         
+        array(
+            'name' => t('Menningar, æskulýðs, velferðar- og jafnréttisnefnd'),
+            'vid' => $vocab_committee->vid,
+        ),         
+        array(
+            'name' => t('Afréttarnefnd Gnúpverjaafréttar'),
+            'vid' => $vocab_committee->vid,
+        ),         
+        array(
+            'name' => t('Kjörstjórn'),
+            'vid' => $vocab_committee->vid,
+        ),         
+        array(
+            'name' => t('Félagsmálanefnd'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Skoðunarmenn hreppsreikninga'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Aðalfundur SASS'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Aðalfundur Heilbrigðiseftirlits Suðurlands'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Aðalfundur Skólaskrifstofu Suðurlands'),
+            'vid' => $vocab_committee->vid,
+        ),        
+        array(
+            'name' => t('Sorpstöð Suðurlands'),
+            'vid' => $vocab_committee->vid,
+        ),        
+
   );
   
     $child_list = array();
