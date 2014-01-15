@@ -12,7 +12,7 @@ function municipality_ct_taxonomy_default_vocabularies() {
     'category' => array(
       'name' => 'Flokkur',
       'machine_name' => 'category',
-      'description' => '',
+      'description' => 'Flokkar fyrir valmynd.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
@@ -35,7 +35,7 @@ function municipality_ct_taxonomy_default_vocabularies() {
     'committee' => array(
       'name' => 'Nefnd',
       'machine_name' => 'committee',
-      'description' => 'Nefndir sem starfa hjá sveitastjórn.',
+      'description' => 'Nefndir sem skipaðar eru af sveitastjórn.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
@@ -58,7 +58,7 @@ function municipality_ct_taxonomy_default_vocabularies() {
     'party' => array(
       'name' => 'Listi',
       'machine_name' => 'party',
-      'description' => 'Stjórnmálaflokkar',
+      'description' => 'Listar fulltrúa sveitastjórnar.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
@@ -81,7 +81,7 @@ function municipality_ct_taxonomy_default_vocabularies() {
     'photos' => array(
       'name' => 'Myndir',
       'machine_name' => 'photos',
-      'description' => '',
+      'description' => 'Merkingar á myndir.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
@@ -102,9 +102,9 @@ function municipality_ct_taxonomy_default_vocabularies() {
       ),
     ),
     'role' => array(
-      'name' => 'Starfsheiti',
+      'name' => 'Starsheiti',
       'machine_name' => 'role',
-      'description' => 'Starfsheiti',
+      'description' => 'Starfsheiti starfsmanna hreppsins og hlutverk fulltrúa í sveitastjórn.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
@@ -127,7 +127,7 @@ function municipality_ct_taxonomy_default_vocabularies() {
     'settings' => array(
       'name' => 'Stillingar',
       'machine_name' => 'settings',
-      'description' => '',
+      'description' => 'Auka upplýsingar um færsluna.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

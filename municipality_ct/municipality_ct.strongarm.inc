@@ -333,7 +333,14 @@ function municipality_ct_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'filename' => array(
+          'weight' => '0',
+        ),
+        'preview' => array(
+          'weight' => '1',
+        ),
+      ),
       'display' => array(),
     ),
   );
@@ -398,7 +405,7 @@ function municipality_ct_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
       ),
       'display' => array(),
@@ -477,7 +484,7 @@ function municipality_ct_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
       ),
       'display' => array(),
@@ -534,25 +541,44 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__category';
+  $strongarm->value = array();
+  $export['field_bundle_settings_taxonomy_term__category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__committee';
+  $strongarm->value = array();
+  $export['field_bundle_settings_taxonomy_term__committee'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__party';
+  $strongarm->value = array();
+  $export['field_bundle_settings_taxonomy_term__party'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__photos';
+  $strongarm->value = array();
+  $export['field_bundle_settings_taxonomy_term__photos'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_taxonomy_term__role';
-  $strongarm->value = array(
-    'view_modes' => array(),
-    'extra_fields' => array(
-      'form' => array(
-        'path' => array(
-          'weight' => '30',
-        ),
-        'name' => array(
-          'weight' => '-5',
-        ),
-        'description' => array(
-          'weight' => '0',
-        ),
-      ),
-      'display' => array(),
-    ),
-  );
+  $strongarm->value = array();
   $export['field_bundle_settings_taxonomy_term__role'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__settings';
+  $strongarm->value = array();
+  $export['field_bundle_settings_taxonomy_term__settings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -758,8 +784,15 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'location_defaultnum_post';
+  $strongarm->value = '0';
+  $export['location_defaultnum_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'location_defaultnum_reports';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['location_defaultnum_reports'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -833,6 +866,13 @@ function municipality_ct_strongarm() {
   $strongarm->name = 'location_maxnum_place';
   $strongarm->value = '1';
   $export['location_maxnum_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'location_maxnum_post';
+  $strongarm->value = '0';
+  $export['location_maxnum_post'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -957,6 +997,7 @@ function municipality_ct_strongarm() {
       'min' => '0',
       'max' => '1',
       'add' => '1',
+      'location_addanother' => 0,
     ),
     'form' => array(
       'weight' => '0',
@@ -1013,11 +1054,6 @@ function municipality_ct_strongarm() {
           'default' => '',
           'weight' => '25',
         ),
-        'fax' => array(
-          'collect' => '1',
-          'default' => '',
-          'weight' => '30',
-        ),
       ),
     ),
     'display' => array(
@@ -1032,7 +1068,6 @@ function municipality_ct_strongarm() {
         'country' => 0,
         'locpick' => 0,
         'email' => 0,
-        'fax' => 0,
         'phone' => 0,
         'province_name' => 0,
         'country_name' => 0,
@@ -1051,12 +1086,13 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'location_settings_node_reports';
+  $strongarm->name = 'location_settings_node_post';
   $strongarm->value = array(
     'multiple' => array(
       'min' => '0',
       'max' => '0',
-      'add' => '1',
+      'add' => '0',
+      'location_addanother' => 0,
     ),
     'form' => array(
       'weight' => '0',
@@ -1113,10 +1149,100 @@ function municipality_ct_strongarm() {
           'default' => '',
           'weight' => '25',
         ),
-        'fax' => array(
+      ),
+    ),
+    'display' => array(
+      'weight' => '0',
+      'hide' => array(
+        'name' => 0,
+        'street' => 0,
+        'additional' => 0,
+        'city' => 0,
+        'province' => 0,
+        'postal_code' => 0,
+        'country' => 0,
+        'locpick' => 0,
+        'email' => 0,
+        'phone' => 0,
+        'province_name' => 0,
+        'country_name' => 0,
+        'map_link' => 0,
+        'coords' => 0,
+      ),
+      'teaser' => 1,
+      'full' => 1,
+    ),
+    'rss' => array(
+      'mode' => 'simple',
+    ),
+  );
+  $export['location_settings_node_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'location_settings_node_reports';
+  $strongarm->value = array(
+    'multiple' => array(
+      'min' => '0',
+      'max' => '0',
+      'add' => '0',
+      'location_addanother' => 0,
+    ),
+    'form' => array(
+      'weight' => '0',
+      'collapsible' => 1,
+      'collapsed' => 1,
+      'fields' => array(
+        'name' => array(
+          'collect' => '1',
+          'default' => '',
+          'weight' => '2',
+        ),
+        'street' => array(
+          'collect' => '1',
+          'default' => '',
+          'weight' => '4',
+        ),
+        'additional' => array(
+          'collect' => '1',
+          'default' => '',
+          'weight' => '6',
+        ),
+        'city' => array(
           'collect' => '0',
           'default' => '',
-          'weight' => '30',
+          'weight' => '8',
+        ),
+        'province' => array(
+          'collect' => '0',
+          'widget' => 'autocomplete',
+          'default' => '',
+          'weight' => '10',
+        ),
+        'postal_code' => array(
+          'collect' => '0',
+          'default' => '',
+          'weight' => '12',
+        ),
+        'country' => array(
+          'collect' => '1',
+          'default' => 'is',
+          'weight' => '14',
+        ),
+        'locpick' => array(
+          'collect' => '1',
+          'weight' => '20',
+        ),
+        'phone' => array(
+          'collect' => '0',
+          'default' => '',
+          'weight' => '25',
+        ),
+        'email' => array(
+          'collect' => '0',
+          'default' => '',
+          'weight' => '25',
         ),
       ),
     ),
@@ -1132,7 +1258,6 @@ function municipality_ct_strongarm() {
         'country' => 0,
         'locpick' => 0,
         'email' => 0,
-        'fax' => 0,
         'phone' => 0,
         'province_name' => 0,
         'country_name' => 0,
@@ -1472,7 +1597,7 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_place';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_place'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1681,6 +1806,13 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_frontpage';
+  $strongarm->value = 'front';
+  $export['site_frontpage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
   $strongarm->value = 'Skeiða- og Gnúpverjahreppur';
   $export['site_name'] = $strongarm;
@@ -1783,7 +1915,7 @@ function municipality_ct_strongarm() {
     'favicon_path' => '',
     'favicon_upload' => '',
     'general__active_tab' => 'edit-theme-settings',
-    'bootstrap__active_tab' => 'edit-advanced',
+    'bootstrap__active_tab' => 'edit-components',
     'bootstrap_breadcrumb' => '1',
     'bootstrap_breadcrumb_home' => 1,
     'bootstrap_breadcrumb_title' => 0,

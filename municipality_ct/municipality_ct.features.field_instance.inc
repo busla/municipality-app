@@ -10,6 +10,115 @@
 function municipality_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'file-document-field_document_title'
+  $field_instances['file-document-field_document_title'] = array(
+    'bundle' => 'document',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Veldu heiti á skrána.',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_document_title',
+    'label' => 'Skrárheiti',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'file-document-field_form'
+  $field_instances['file-document-field_form'] = array(
+    'bundle' => 'document',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Ef nota á skjalið sem eyðublað skaltu haka við hér.',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_form',
+    'label' => 'Eyðublað',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'file-image-field_file_image_alt_text'
   $field_instances['file-image-field_file_image_alt_text'] = array(
     'bundle' => 'image',
@@ -17,6 +126,12 @@ function municipality_ct_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.',
     'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -86,6 +201,12 @@ function municipality_ct_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Merktu myndina eftir aðstæðum. Hægt er að setja fleiri en eina merkingu.',
     'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -151,6 +272,12 @@ function municipality_ct_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.',
     'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -253,7 +380,51 @@ function municipality_ct_field_default_field_instances() {
         'relation_endpoint_search_by_id' => 0,
       ),
       'type' => 'relation_add',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-committees-field_board_type'
+  $field_instances['node-committees-field_board_type'] = array(
+    'bundle' => 'committees',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Veldu tegund nefndar.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_board_type',
+    'label' => 'Nefndarflokkur',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 1,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
+      'weight' => 1,
     ),
   );
 
@@ -295,7 +466,7 @@ function municipality_ct_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -304,7 +475,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'committees',
     'default_value' => array(
       0 => array(
-        'tid' => 50,
+        'tid' => 7,
       ),
     ),
     'deleted' => 0,
@@ -343,7 +514,7 @@ function municipality_ct_field_default_field_instances() {
         ),
       ),
       'type' => 'taxonomy_shs',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -399,7 +570,7 @@ function municipality_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -454,7 +625,7 @@ function municipality_ct_field_default_field_instances() {
         'year_range' => '-10:+5',
       ),
       'type' => 'date_popup',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -796,7 +967,11 @@ function municipality_ct_field_default_field_instances() {
   // Exported field_instance: 'node-post-field_category'
   $field_instances['node-post-field_category'] = array(
     'bundle' => 'post',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 4,
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Veldu flokk fyrir efnið. ',
     'display' => array(
@@ -828,7 +1003,7 @@ function municipality_ct_field_default_field_instances() {
         'shs' => array(
           'create_new_levels' => 1,
           'create_new_terms' => 1,
-          'force_deepest' => 0,
+          'force_deepest' => 1,
           'node_count' => 0,
         ),
       ),
@@ -883,11 +1058,11 @@ function municipality_ct_field_default_field_instances() {
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
-        'repeat_collapsed' => 0,
+        'repeat_collapsed' => 1,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_text',
+      'type' => 'date_popup',
       'weight' => 13,
     ),
   );
@@ -1077,7 +1252,48 @@ function municipality_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 4,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-reports-field_board_type'
+  $field_instances['node-reports-field_board_type'] = array(
+    'bundle' => 'reports',
+    'default_value' => array(
+      0 => array(
+        'tid' => 12,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Hvaða nefnd skilaði inn fundargerðinni.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_board_type',
+    'label' => 'Nefndarflokkur',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
     ),
   );
 
@@ -1119,7 +1335,7 @@ function municipality_ct_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1128,7 +1344,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'reports',
     'default_value' => array(
       0 => array(
-        'tid' => 40,
+        'tid' => 8,
       ),
     ),
     'deleted' => 0,
@@ -1211,7 +1427,7 @@ function municipality_ct_field_default_field_instances() {
         'relation_endpoint_search_by_id' => 0,
       ),
       'type' => 'relation_add',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -1760,9 +1976,12 @@ function municipality_ct_field_default_field_instances() {
   t('Alt Text');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
   t('Aukaefni sem fylgir fundargerð.');
+  t('Ef nota á skjalið sem eyðublað skaltu haka við hér.');
+  t('Eyðublað');
   t('Flokkur');
   t('Hlekkir');
   t('Hlekkur');
+  t('Hvaða nefnd skilaði inn fundargerðinni.');
   t('Hægt er að skrá fleiri en eitt netfang.');
   t('Innihald');
   t('Innihald fundargerðar');
@@ -1775,11 +1994,13 @@ function municipality_ct_field_default_field_instances() {
   t('Myndir');
   t('Myndir af staðnum.');
   t('Nefnd');
+  t('Nefndarflokkur');
   t('Nefndarmenn');
   t('Netfang');
   t('Opnunartími');
   t('Settu inn hlekki með færslunni.');
   t('Skrifaðu meginmál hér.');
+  t('Skrárheiti');
   t('Skráðu tímasetningar ef það á við.');
   t('Starfsheiti');
   t('Stillingar');
@@ -1799,11 +2020,13 @@ function municipality_ct_field_default_field_instances() {
   t('Veldu PDF til að setja sem viðhengi');
   t('Veldu flokk fyrir efnið. ');
   t('Veldu flokk.');
+  t('Veldu heiti á skrána.');
   t('Veldu lista ef við á.');
   t('Veldu mynd.');
   t('Veldu nefnd sem skilaði inn fundargerð.');
   t('Veldu nefndarmenn.');
   t('Veldu starfsheiti');
+  t('Veldu tegund nefndar.');
   t('Veldu tímabilið sem nefndin starfar. Ef þú veist ekki dagsetninguna sem hún var skipuð þá velurðu fyrsta dag mánaðarins.');
   t('Viðhengi');
   t('endpoints');

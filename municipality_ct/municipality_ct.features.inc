@@ -33,7 +33,7 @@ function municipality_ct_node_info() {
       'help' => '',
     ),
     'place' => array(
-      'name' => t('Staður'),
+      'name' => t('Staðir'),
       'base' => 'node_content',
       'description' => t('Staðir sem hafa staðsetningu, tengiliði, síma, netfang og aðrar upplýsingar.'),
       'has_title' => '1',
