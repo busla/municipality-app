@@ -1971,6 +1971,40 @@ function municipality_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_real_name'
+  $field_instances['user-user-field_real_name'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_real_name',
+    'label' => 'Fullt nafn',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 11,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Alt Text');
@@ -1979,6 +2013,7 @@ function municipality_ct_field_default_field_instances() {
   t('Ef nota á skjalið sem eyðublað skaltu haka við hér.');
   t('Eyðublað');
   t('Flokkur');
+  t('Fullt nafn');
   t('Hlekkir');
   t('Hlekkur');
   t('Hvaða nefnd skilaði inn fundargerðinni.');

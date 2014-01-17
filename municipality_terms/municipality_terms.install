@@ -27,7 +27,7 @@ function municipality_terms_enable() {
       'description' => t('Merkingar á myndir.'),
     ),
     array(
-      'name' => t('Starsheiti'),
+      'name' => t('Starfsheiti'),
       'machine_name' => 'role',
       'description' => t('Starfsheiti starfsmanna hreppsins og hlutverk fulltrúa í sveitastjórn.'),
     ),    
@@ -185,6 +185,11 @@ function municipality_terms_enable() {
             'name' => t('Aðrar nefndir'),
             'vid' => $vocab_committee->vid,
           ),        
+          array(
+            'name' => t('Slæður'),
+            'vid' => $vocab_settings->vid,
+          ),        
+
   );
   
     $child_list = array();
