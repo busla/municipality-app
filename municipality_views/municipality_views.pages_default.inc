@@ -830,18 +830,13 @@ function municipality_views_default_page_manager_handlers() {
     $pane->pid = 'new-21';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'skeidgnup_meetings-panel_pane_3';
+    $pane->subtype = 'uploaded_files-panel_pane_3';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'fields_override' => array(
-        'field_attachment' => 1,
-      ),
       'context' => array(
         0 => 'argument_entity_id:node_1',
       ),
-      'override_title' => 1,
-      'override_title_text' => 'Viðbótargögn',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1942,7 +1937,10 @@ function municipality_views_default_page_manager_pages() {
   $page->admin_title = 'Forsíða';
   $page->admin_description = '';
   $page->path = 'front';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -2184,7 +2182,10 @@ function municipality_views_default_page_manager_pages() {
   $page->admin_title = 'Myndir';
   $page->admin_description = '';
   $page->path = 'photos';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Myndir',
