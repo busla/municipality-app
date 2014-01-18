@@ -365,10 +365,10 @@ function municipality_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'filename' => array(
-          'weight' => '-10',
+          'weight' => '0',
         ),
         'preview' => array(
-          'weight' => '-5',
+          'weight' => '1',
         ),
       ),
       'display' => array(),
