@@ -626,6 +626,7 @@ function municipality_views_default_page_manager_handlers() {
       'context' => array(
         0 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
         1 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
+        2 => 'argument_entity_id:node_1',
       ),
       'fields_override' => array(
         'title' => 1,
@@ -682,6 +683,14 @@ function municipality_views_default_page_manager_handlers() {
         'context' => 'argument_entity_id:node_1',
         'id' => 1,
       ),
+      2 => array(
+        'identifier' => 'Taxonomy term from Node (on Node: Nefndarflokkur [field_board_type])',
+        'keyword' => 'taxonomy_term_2',
+        'name' => 'entity_from_field:field_board_type-node-taxonomy_term',
+        'delta' => 0,
+        'context' => 'argument_entity_id:node_1',
+        'id' => 1,
+      ),
     ),
     'access' => array(
       'plugins' => array(
@@ -719,7 +728,7 @@ function municipality_views_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node:field-category';
+  $display->title = '%node:field-board-type › Fundargerð';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -814,7 +823,7 @@ function municipality_views_default_page_manager_handlers() {
         0 => 'argument_entity_id:node_1',
       ),
       'override_title' => 1,
-      'override_title_text' => 'Nefnd',
+      'override_title_text' => 'Nefndarmenn',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -837,6 +846,8 @@ function municipality_views_default_page_manager_handlers() {
       'context' => array(
         0 => 'argument_entity_id:node_1',
       ),
+      'override_title' => 1,
+      'override_title_text' => 'Viðbótargögn',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -2076,7 +2087,15 @@ function municipality_views_default_page_manager_pages() {
     $pane->subtype = 'relations_view-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'exposed' => array(
+        'tid' => '16',
+      ),
+      'context' => array(
+        0 => 'empty',
+        1 => 'empty',
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
