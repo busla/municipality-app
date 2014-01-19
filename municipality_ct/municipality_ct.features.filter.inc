@@ -29,7 +29,7 @@ function municipality_ct_filter_default_formats() {
         'weight' => 1,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p>',
+          'allowed_html' => '<a> <em> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <span>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),

@@ -1697,21 +1697,21 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_file_document_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'skjol/[file:name]';
   $export['pathauto_file_document_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_file_image_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'myndir/[file:name]';
   $export['pathauto_file_image_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_file_pattern';
-  $strongarm->value = 'files/[file:name]';
+  $strongarm->value = '';
   $export['pathauto_file_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1732,14 +1732,14 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_pattern';
-  $strongarm->value = 'content/[node:title]';
+  $strongarm->value = '[node:field-category:parents:join-path]/[node:field-category]/[node:title]';
   $export['pathauto_node_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_post_pattern';
-  $strongarm->value = '[node:field-post-menu:parents:join-path]/[node:field_post_menu]/[node:title]';
+  $strongarm->value = '';
   $export['pathauto_node_post_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1781,7 +1781,7 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_user_pattern';
-  $strongarm->value = 'users/[user:name]';
+  $strongarm->value = 'notendur/[user:name]';
   $export['pathauto_user_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
