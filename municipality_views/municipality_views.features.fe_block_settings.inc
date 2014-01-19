@@ -90,5 +90,83 @@ function municipality_views_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['poll-recent'] = array(
+    'cache' => 1,
+    'custom' => 0,
+    'delta' => 'recent',
+    'module' => 'poll',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['search-form'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'form',
+    'module' => 'search',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'header',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => -15,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['social_media_links-social-media-links'] = array(
+    'cache' => 1,
+    'custom' => 0,
+    'delta' => 'social-media-links',
+    'module' => 'social_media_links',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'header',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => -16,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   return $export;
 }

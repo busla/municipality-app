@@ -13,251 +13,6 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_committees';
-  $strongarm->value = 0;
-  $export['comment_anonymous_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_place';
-  $strongarm->value = 0;
-  $export['comment_anonymous_place'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_post';
-  $strongarm->value = 0;
-  $export['comment_anonymous_post'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_reports';
-  $strongarm->value = 0;
-  $export['comment_anonymous_reports'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_staff';
-  $strongarm->value = 0;
-  $export['comment_anonymous_staff'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_committees';
-  $strongarm->value = '1';
-  $export['comment_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_committees';
-  $strongarm->value = 1;
-  $export['comment_default_mode_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_place';
-  $strongarm->value = 1;
-  $export['comment_default_mode_place'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_post';
-  $strongarm->value = 1;
-  $export['comment_default_mode_post'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_reports';
-  $strongarm->value = 1;
-  $export['comment_default_mode_reports'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_staff';
-  $strongarm->value = 1;
-  $export['comment_default_mode_staff'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_committees';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_place';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_place'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_post';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_post'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_reports';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_reports'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_staff';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_staff'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_committees';
-  $strongarm->value = 1;
-  $export['comment_form_location_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_place';
-  $strongarm->value = 1;
-  $export['comment_form_location_place'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_post';
-  $strongarm->value = 1;
-  $export['comment_form_location_post'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_reports';
-  $strongarm->value = 1;
-  $export['comment_form_location_reports'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_staff';
-  $strongarm->value = 1;
-  $export['comment_form_location_staff'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_place';
-  $strongarm->value = '1';
-  $export['comment_place'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_post';
-  $strongarm->value = '1';
-  $export['comment_post'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_committees';
-  $strongarm->value = '1';
-  $export['comment_preview_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_place';
-  $strongarm->value = '1';
-  $export['comment_preview_place'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_post';
-  $strongarm->value = '1';
-  $export['comment_preview_post'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_reports';
-  $strongarm->value = '1';
-  $export['comment_preview_reports'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_staff';
-  $strongarm->value = '1';
-  $export['comment_preview_staff'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_reports';
-  $strongarm->value = '1';
-  $export['comment_reports'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_staff';
-  $strongarm->value = '1';
-  $export['comment_staff'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_committees';
-  $strongarm->value = 1;
-  $export['comment_subject_field_committees'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_place';
-  $strongarm->value = 1;
-  $export['comment_subject_field_place'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_post';
-  $strongarm->value = 1;
-  $export['comment_subject_field_post'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_reports';
-  $strongarm->value = 1;
-  $export['comment_subject_field_reports'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_staff';
-  $strongarm->value = 1;
-  $export['comment_subject_field_staff'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'date_default_timezone';
   $strongarm->value = 'UTC';
   $export['date_default_timezone'] = $strongarm;
@@ -1413,6 +1168,13 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'media__icon_base_directory';
+  $strongarm->value = 'public://media-icons';
+  $export['media__icon_base_directory'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_admin_title';
   $strongarm->value = 'Hliðarstika';
   $export['menu_block_1_admin_title'] = $strongarm;
@@ -1584,6 +1346,15 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_poll';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_poll'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_post';
   $strongarm->value = array(
     0 => 'status',
@@ -1626,6 +1397,13 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_poll';
+  $strongarm->value = '0';
+  $export['node_preview_poll'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_post';
   $strongarm->value = '0';
   $export['node_preview_post'] = $strongarm;
@@ -1657,6 +1435,13 @@ function municipality_ct_strongarm() {
   $strongarm->name = 'node_submitted_place';
   $strongarm->value = 0;
   $export['node_submitted_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_poll';
+  $strongarm->value = 0;
+  $export['node_submitted_poll'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1839,6 +1624,81 @@ function municipality_ct_strongarm() {
   $strongarm->name = 'site_name';
   $strongarm->value = 'Skeiða- og Gnúpverjahreppur';
   $export['site_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'social_media_links_appearance';
+  $strongarm->value = array(
+    'orientation' => 'h',
+    'show_name' => 0,
+  );
+  $export['social_media_links_appearance'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'social_media_links_icon_style';
+  $strongarm->value = 'elegantthemes:32';
+  $export['social_media_links_icon_style'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'social_media_links_link_attributes';
+  $strongarm->value = array(
+    'target' => '<none>',
+    'rel' => '<none>',
+  );
+  $export['social_media_links_link_attributes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'social_media_links_platforms';
+  $strongarm->value = array(
+    'facebook' => array(
+      'platform_value' => 'SkeidaOgGnupverjahreppur',
+      'weight' => '-9',
+    ),
+    'twitter' => array(
+      'platform_value' => '',
+      'weight' => '-8',
+    ),
+    'googleplus' => array(
+      'platform_value' => '',
+      'weight' => '-7',
+    ),
+    'linkedin' => array(
+      'platform_value' => '',
+      'weight' => '-6',
+    ),
+    'pinterest' => array(
+      'platform_value' => '',
+      'weight' => '-5',
+    ),
+    'vimeo' => array(
+      'platform_value' => '',
+      'weight' => '-4',
+    ),
+    'youtube' => array(
+      'platform_value' => '',
+      'weight' => '-3',
+    ),
+    'rss' => array(
+      'platform_value' => 'rss.xml',
+      'weight' => '-2',
+    ),
+    'contact' => array(
+      'platform_value' => 'contact',
+      'weight' => '-1',
+    ),
+    'email' => array(
+      'platform_value' => '',
+      'weight' => '0',
+    ),
+  );
+  $export['social_media_links_platforms'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
