@@ -20,6 +20,57 @@ function municipality_ct_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'document__default__file_field_file_download_link';
+  $file_display->weight = -45;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'text' => 'Download [file:name]',
+  );
+  $export['document__default__file_field_file_download_link'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__default__file_field_file_table';
+  $file_display->weight = -50;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__default__file_field_file_table'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__default__file_field_file_url_plain';
+  $file_display->weight = -49;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__default__file_field_file_url_plain'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__default__file_field_media_colorbox';
+  $file_display->weight = -47;
+  $file_display->status = FALSE;
+  $file_display->settings = array(
+    'file_view_mode' => 'slides',
+    'colorbox_view_mode' => 'slides',
+    'fixed_width' => '',
+    'fixed_height' => '',
+    'colorbox_gallery' => 'post',
+    'colorbox_gallery_custom' => '',
+    'colorbox_caption' => 'title',
+    'audio_playlist' => 0,
+  );
+  $export['document__default__file_field_media_colorbox'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'document__default__file_field_media_large_icon';
+  $file_display->weight = -46;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['document__default__file_field_media_large_icon'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'document__preview__file_field_media_large_icon';
   $file_display->weight = 50;
   $file_display->status = TRUE;

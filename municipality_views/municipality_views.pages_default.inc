@@ -1360,7 +1360,7 @@ function municipality_views_default_page_manager_handlers() {
           'settings' => array(
             'vid' => '1',
             1 => array(
-              13 => '13',
+              12 => '12',
             ),
             3 => array(),
             4 => array(),
@@ -1376,7 +1376,7 @@ function municipality_views_default_page_manager_handlers() {
           'settings' => array(
             'vid' => '1',
             1 => array(
-              15 => '15',
+              14 => '14',
             ),
             3 => array(),
             4 => array(),
@@ -1476,7 +1476,7 @@ function municipality_views_default_page_manager_handlers() {
           'settings' => array(
             'vid' => '1',
             1 => array(
-              14 => '14',
+              13 => '13',
             ),
             3 => array(),
             4 => array(),
@@ -1782,7 +1782,7 @@ function municipality_views_default_page_manager_handlers() {
           'settings' => array(
             'vid' => '1',
             1 => array(
-              11 => '11',
+              10 => '10',
             ),
             3 => array(),
             4 => array(),
@@ -1942,7 +1942,7 @@ function municipality_views_default_page_manager_handlers() {
           'settings' => array(
             'vid' => '1',
             1 => array(
-              10 => '10',
+              9 => '9',
             ),
             3 => array(),
             4 => array(),
