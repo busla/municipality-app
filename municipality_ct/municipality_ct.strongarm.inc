@@ -1538,7 +1538,7 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_committee_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'nefndarflokkar/[term:name]';
   $export['pathauto_taxonomy_term_committee_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
