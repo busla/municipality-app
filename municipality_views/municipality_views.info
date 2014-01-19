@@ -37,6 +37,7 @@ features[fe_block_settings][] = block-opening_hours
 features[fe_block_settings][] = poll-recent
 features[fe_block_settings][] = search-form
 features[fe_block_settings][] = social_media_links-social-media-links
+features[fe_block_settings][] = views-uploaded_files-block_1
 features[features_api][] = api:2
 features[page_manager_handlers][] = node_view_panel_context
 features[page_manager_handlers][] = node_view_panel_context_2

@@ -168,5 +168,31 @@ function municipality_views_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['views-uploaded_files-block_1'] = array(
+    'cache' => 8,
+    'custom' => 0,
+    'delta' => 'uploaded_files-block_1',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'slideshow',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }
