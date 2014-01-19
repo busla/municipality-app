@@ -818,7 +818,7 @@ function municipality_views_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node:field-board-type › Fundargerð';
+  $display->title = 'Fundargerðir';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

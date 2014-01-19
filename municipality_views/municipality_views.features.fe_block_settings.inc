@@ -1,0 +1,94 @@
+<?php
+/**
+ * @file
+ * municipality_views.features.fe_block_settings.inc
+ */
+
+/**
+ * Implements hook_default_fe_block_settings().
+ */
+function municipality_views_default_fe_block_settings() {
+  $export = array();
+
+  $export['version'] = '2.0';
+
+  $export['block-contact_us'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'contact_us',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Hafa samband',
+    'visibility' => 0,
+  );
+
+  $export['block-office_location'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'office_location',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Staðsetning',
+    'visibility' => 0,
+  );
+
+  $export['block-opening_hours'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'opening_hours',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Opnunartími',
+    'visibility' => 0,
+  );
+
+  return $export;
+}
