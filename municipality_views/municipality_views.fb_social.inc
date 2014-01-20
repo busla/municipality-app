@@ -13,6 +13,28 @@ function municipality_views_fb_social_default_presets() {
   $fb_social_preset = new stdClass();
   $fb_social_preset->disabled = FALSE; /* Edit this to true to make a default fb_social_preset disabled initially */
   $fb_social_preset->api_version = 1;
+  $fb_social_preset->name = 'Fanpage Like';
+  $fb_social_preset->description = '';
+  $fb_social_preset->plugin_type = 'likebox';
+  $fb_social_preset->settings = array(
+    'block' => 1,
+  );
+  $fb_social_preset->fb_attrs = array(
+    'href' => 'https://www.facebook.com/SkeidaOgGnupverjahreppur',
+    'width' => '',
+    'height' => '',
+    'colorscheme' => 'light',
+    'show_faces' => 1,
+    'border_color' => '',
+    'stream' => 0,
+    'header' => 0,
+    'force_wall' => 0,
+  );
+  $export['Fanpage Like'] = $fb_social_preset;
+
+  $fb_social_preset = new stdClass();
+  $fb_social_preset->disabled = FALSE; /* Edit this to true to make a default fb_social_preset disabled initially */
+  $fb_social_preset->api_version = 1;
   $fb_social_preset->name = 'Like button';
   $fb_social_preset->description = '';
   $fb_social_preset->plugin_type = 'like';

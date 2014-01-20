@@ -621,7 +621,23 @@ function municipality_views_default_page_manager_handlers() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'modifier_class' => '',
+        'collapsible' => 0,
+        'collapsed' => 0,
+        'hide_classes' => array(
+          'hidden-xs' => 0,
+          'hidden-sm' => 0,
+          'hidden-md' => 0,
+          'hidden-lg' => 0,
+        ),
+        'additional_classes' => array(
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+        ),
+      ),
+      'style' => 'bootstrap_styles:panel',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -2691,6 +2707,43 @@ function municipality_views_default_page_manager_pages() {
     $display->panels['right-row-three'][0] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
+    $pane->panel = 'right-row-three';
+    $pane->type = 'block';
+    $pane->subtype = 'fb_social-Fanpage Like';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Fésbókin',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'modifier_class' => '',
+        'collapsible' => 0,
+        'collapsed' => 0,
+        'hide_classes' => array(
+          'hidden-xs' => 0,
+          'hidden-sm' => 0,
+          'hidden-md' => 0,
+          'hidden-lg' => 0,
+        ),
+        'additional_classes' => array(
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+        ),
+      ),
+      'style' => 'bootstrap_styles:panel',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['right-row-three'][1] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
     $pane->panel = 'right-row-two';
     $pane->type = 'views_panes';
     $pane->subtype = 'municipality_posts-panel_pane_11';
@@ -2720,10 +2773,10 @@ function municipality_views_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right-row-two'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['right-row-two'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'right-row-two';
     $pane->type = 'views_panes';
     $pane->subtype = 'municipality_posts-panel_pane_11';
@@ -2753,10 +2806,10 @@ function municipality_views_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right-row-two'][1] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['right-row-two'][1] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'right-row-two';
     $pane->type = 'views_panes';
     $pane->subtype = 'uploaded_files-panel_pane_3';
@@ -2780,10 +2833,10 @@ function municipality_views_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['right-row-two'][2] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['right-row-two'][2] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'right-row-two';
     $pane->type = 'views_panes';
     $pane->subtype = 'uploaded_files-panel_pane_3';
@@ -2807,8 +2860,8 @@ function municipality_views_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['right-row-two'][3] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['right-row-two'][3] = 'new-10';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2880,7 +2933,7 @@ function municipality_views_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'uploaded_files-panel_pane_2';
@@ -2895,8 +2948,8 @@ function municipality_views_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['middle'][0] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['middle'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

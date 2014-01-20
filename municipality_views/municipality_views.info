@@ -31,6 +31,7 @@ features[ctools][] = fb_social:fb_social:1
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
+features[fb_social_preset][] = Fanpage Like
 features[fb_social_preset][] = Like button
 features[fe_block_boxes][] = contact_us
 features[fe_block_boxes][] = office_location
