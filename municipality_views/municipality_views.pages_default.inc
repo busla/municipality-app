@@ -67,29 +67,6 @@ function municipality_views_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'header';
-    $pane->type = 'page_tabs';
-    $pane->subtype = 'page_tabs';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'type' => 'both',
-      'id' => 'tabs',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['header'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'header';
     $pane->type = 'page_breadcrumb';
     $pane->subtype = 'page_breadcrumb';
     $pane->shown = TRUE;
@@ -111,13 +88,36 @@ function municipality_views_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'col-lg-6',
+      'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['header'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'image';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['header'][1] = 'new-2';
+    $display->panels['image'][0] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'image';
@@ -148,10 +148,10 @@ function municipality_views_default_page_manager_handlers() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['image'][0] = 'new-3';
+    $display->panels['image'][1] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'left';
@@ -2523,6 +2523,9 @@ function municipality_views_default_page_manager_pages() {
       ),
       'override_title' => 1,
       'override_title_text' => 'Framundan',
+      'exposed' => array(
+        'field_settings_tid' => '4',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
@@ -2574,7 +2577,16 @@ function municipality_views_default_page_manager_pages() {
     $pane->subtype = 'uploaded_files-panel_pane_3';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'exposed' => array(
+        'field_document_tags_tid' => '38',
+      ),
+      'context' => array(
+        0 => 'empty',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Eyðublöð',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -2585,6 +2597,33 @@ function municipality_views_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-8'] = $pane;
     $display->panels['right-row-two'][2] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'right-row-two';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'uploaded_files-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'exposed' => array(
+        'field_document_tags_tid' => '39',
+      ),
+      'context' => array(
+        0 => 'empty',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Fréttabréf',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['right-row-two'][3] = 'new-9';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2656,7 +2695,7 @@ function municipality_views_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'uploaded_files-panel_pane_2';
@@ -2671,8 +2710,8 @@ function municipality_views_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['middle'][0] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['middle'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

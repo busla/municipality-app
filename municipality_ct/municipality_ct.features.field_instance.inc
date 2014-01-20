@@ -63,62 +63,6 @@ function municipality_ct_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'file-document-field_form'
-  $field_instances['file-document-field_form'] = array(
-    'bundle' => 'document',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Ef nota á skjalið sem eyðublað skaltu haka við hér.',
-    'display' => array(
-      'colorbox' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 0,
-      ),
-      'preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'file',
-    'field_name' => 'field_form',
-    'label' => 'Eyðublað',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-      'wysiwyg_override' => 0,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'file-image-field_file_image_alt_text'
   $field_instances['file-image-field_file_image_alt_text'] = array(
     'bundle' => 'image',
@@ -191,80 +135,6 @@ function municipality_ct_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'file-image-field_file_image_frontpage'
-  $field_instances['file-image-field_file_image_frontpage'] = array(
-    'bundle' => 'image',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Ef valið þá birtist mynd í slæðum á forsíðu. Mundu að setja Titil og <em>ALT</em> texta með.',
-    'display' => array(
-      'colorbox' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 3,
-      ),
-      'half_screen' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'slides' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'file',
-    'field_name' => 'field_file_image_frontpage',
-    'label' => 'Slæða á forsíðu',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-      'wysiwyg_override' => 0,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 2,
     ),
   );
 
@@ -1198,6 +1068,20 @@ function municipality_ct_field_default_field_instances() {
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'upload' => 'upload',
         ),
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -2026,9 +1910,6 @@ function municipality_ct_field_default_field_instances() {
   t('Alt Text');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
   t('Aukaefni sem fylgir fundargerð.');
-  t('Ef nota á skjalið sem eyðublað skaltu haka við hér.');
-  t('Ef valið þá birtist mynd í slæðum á forsíðu. Mundu að setja Titil og <em>ALT</em> texta með.');
-  t('Eyðublað');
   t('Flokkur');
   t('Fullt nafn');
   t('Hlekkir');
@@ -2054,7 +1935,6 @@ function municipality_ct_field_default_field_instances() {
   t('Skrifaðu meginmál hér.');
   t('Skrárheiti');
   t('Skráðu tímasetningar ef það á við.');
-  t('Slæða á forsíðu');
   t('Starfsheiti');
   t('Stillingar');
   t('Stillingar með færslu. ');
