@@ -10,6 +10,91 @@
 function municipality_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'entityqueue_subqueue-slideshow-eq_file'
+  $field_instances['entityqueue_subqueue-slideshow-eq_file'] = array(
+    'bundle' => 'slideshow',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'entityqueue_subqueue',
+    'field_name' => 'eq_file',
+    'label' => 'Queue items',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'entityqueue',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'size' => 60,
+      ),
+      'type' => 'entityqueue_dragtable',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'file-document-field_document_tags'
+  $field_instances['file-document-field_document_tags'] = array(
+    'bundle' => 'document',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Veldu viðeigandi merkingar á skjalið.',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_document_tags',
+    'label' => 'Merkingar',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'file-document-field_document_title'
   $field_instances['file-document-field_document_title'] = array(
     'bundle' => 'document',
@@ -1931,6 +2016,7 @@ function municipality_ct_field_default_field_instances() {
   t('Nefndarmenn');
   t('Netfang');
   t('Opnunartími');
+  t('Queue items');
   t('Settu inn hlekki með færslunni.');
   t('Skrifaðu meginmál hér.');
   t('Skrárheiti');
@@ -1961,6 +2047,7 @@ function municipality_ct_field_default_field_instances() {
   t('Veldu starfsheiti');
   t('Veldu tegund nefndar.');
   t('Veldu tímabilið sem nefndin starfar. Ef þú veist ekki dagsetninguna sem hún var skipuð þá velurðu fyrsta dag mánaðarins.');
+  t('Veldu viðeigandi merkingar á skjalið.');
   t('Viðhengi');
   t('endpoints');
 

@@ -34,6 +34,64 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'entityqueue_field_names';
+  $strongarm->value = array(
+    0 => 'eq_file',
+  );
+  $export['entityqueue_field_names'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'entityqueue_queue_names';
+  $strongarm->value = array(
+    0 => 'slideshow',
+  );
+  $export['entityqueue_queue_names'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'entityreference:base-tables';
+  $strongarm->value = array(
+    'comment' => array(
+      0 => 'comment',
+      1 => 'cid',
+    ),
+    'entityqueue_subqueue' => array(
+      0 => 'entityqueue_subqueue',
+      1 => 'subqueue_id',
+    ),
+    'node' => array(
+      0 => 'node',
+      1 => 'nid',
+    ),
+    'relation' => array(
+      0 => 'relation',
+      1 => 'rid',
+    ),
+    'file' => array(
+      0 => 'file_managed',
+      1 => 'fid',
+    ),
+    'taxonomy_term' => array(
+      0 => 'taxonomy_term_data',
+      1 => 'tid',
+    ),
+    'taxonomy_vocabulary' => array(
+      0 => 'taxonomy_vocabulary',
+      1 => 'vid',
+    ),
+    'user' => array(
+      0 => 'users',
+      1 => 'uid',
+    ),
+  );
+  $export['entityreference:base-tables'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'entity_view_modes';
   $strongarm->value = array(
     'node' => array(),
@@ -1516,9 +1574,30 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_committees_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_committees_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_pattern';
   $strongarm->value = '[node:field-category:parents:join-path]/[node:field-category]/[node:title]';
   $export['pathauto_node_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_place_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_place_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_poll_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_poll_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1530,9 +1609,30 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_reports_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_reports_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_staff_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_staff_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_punctuation_hyphen';
   $strongarm->value = 1;
   $export['pathauto_punctuation_hyphen'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_category_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_category_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1551,9 +1651,37 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_party_pattern';
+  $strongarm->value = 'listar/[term:name]';
+  $export['pathauto_taxonomy_term_party_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_pattern';
   $strongarm->value = '[term:parents:join-path]/[term:name]';
   $export['pathauto_taxonomy_term_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_photos_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_photos_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_role_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_role_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_settings_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_settings_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
