@@ -10,41 +10,6 @@
 function municipality_ct_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'entityqueue_subqueue-slideshow-eq_file'
-  $field_instances['entityqueue_subqueue-slideshow-eq_file'] = array(
-    'bundle' => 'slideshow',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'entityqueue_subqueue',
-    'field_name' => 'eq_file',
-    'label' => 'Queue items',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'entityqueue',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'size' => 60,
-      ),
-      'type' => 'entityqueue_dragtable',
-      'weight' => 0,
-    ),
-  );
-
   // Exported field_instance: 'file-document-field_document_tags'
   $field_instances['file-document-field_document_tags'] = array(
     'bundle' => 'document',
@@ -2026,7 +1991,6 @@ function municipality_ct_field_default_field_instances() {
   t('Nefndarmenn');
   t('Netfang');
   t('Opnunartími');
-  t('Queue items');
   t('Settu inn hlekki með færslunni.');
   t('Skrifaðu meginmál hér.');
   t('Skrárheiti');

@@ -32,45 +32,6 @@ function municipality_ct_field_default_field_bases() {
     'type' => 'relation_endpoint',
   );
 
-  // Exported field_base: 'eq_file'
-  $field_bases['eq_file'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(
-      0 => 'entityqueue_subqueue',
-    ),
-    'field_name' => 'eq_file',
-    'foreign keys' => array(
-      'file_managed' => array(
-        'columns' => array(
-          'target_id' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'entityqueue',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'entityqueue' => array(
-            'status' => 1,
-          ),
-        ),
-      ),
-      'target_type' => 'file',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_attachment'
   $field_bases['field_attachment'] = array(
     'active' => 1,
