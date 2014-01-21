@@ -2839,13 +2839,10 @@ function municipality_views_default_page_manager_pages() {
     $pane->pid = 'new-10';
     $pane->panel = 'right-row-two';
     $pane->type = 'views_panes';
-    $pane->subtype = 'uploaded_files-panel_pane_3';
+    $pane->subtype = 'uploaded_files-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'exposed' => array(
-        'field_document_tags_tid' => '39',
-      ),
       'context' => array(
         0 => 'empty',
       ),

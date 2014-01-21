@@ -889,7 +889,7 @@ function municipality_views_views_default_views() {
 </div>
    [field_body]';
   $handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
-  /* Field: Content: Hlekkir */
+  /* Field: Content: Hlekkur */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -1349,7 +1349,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_body']['alter']['more_link_path'] = '[path]';
   $handler->display->display_options['fields']['field_body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
-  /* Field: Content: Hlekkir */
+  /* Field: Content: Hlekkur */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -2500,7 +2500,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_attachment']['field'] = 'field_attachment';
   $handler->display->display_options['fields']['field_attachment']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_attachment']['delta_offset'] = '0';
-  /* Field: Content: Tímasetningar */
+  /* Field: Content: Opnunartími */
   $handler->display->display_options['fields']['field_dates']['id'] = 'field_dates';
   $handler->display->display_options['fields']['field_dates']['table'] = 'field_data_field_dates';
   $handler->display->display_options['fields']['field_dates']['field'] = 'field_dates';
@@ -2558,7 +2558,7 @@ function municipality_views_views_default_views() {
   );
   $handler->display->display_options['filters']['field_settings_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_settings_tid']['vocabulary'] = 'settings';
-  /* Filter criterion: Content: Tímasetningar -  start date (field_dates) */
+  /* Filter criterion: Content: Opnunartími -  start date (field_dates) */
   $handler->display->display_options['filters']['field_dates_value']['id'] = 'field_dates_value';
   $handler->display->display_options['filters']['field_dates_value']['table'] = 'field_data_field_dates';
   $handler->display->display_options['filters']['field_dates_value']['field'] = 'field_dates_value';
@@ -3599,7 +3599,9 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['filters']['field_document_tags_tid']['id'] = 'field_document_tags_tid';
   $handler->display->display_options['filters']['field_document_tags_tid']['table'] = 'field_data_field_document_tags';
   $handler->display->display_options['filters']['field_document_tags_tid']['field'] = 'field_document_tags_tid';
-  $handler->display->display_options['filters']['field_document_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_document_tags_tid']['value'] = array(
+    36 => '36',
+  );
   $handler->display->display_options['filters']['field_document_tags_tid']['expose']['operator_id'] = 'field_document_tags_tid_op';
   $handler->display->display_options['filters']['field_document_tags_tid']['expose']['label'] = 'Merkingar (field_document_tags)';
   $handler->display->display_options['filters']['field_document_tags_tid']['expose']['operator'] = 'field_document_tags_tid_op';
@@ -3761,12 +3763,15 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'document' => 'document',
   );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_newsletter_value']['id'] = 'field_newsletter_value';
-  $handler->display->display_options['filters']['field_newsletter_value']['table'] = 'field_data_field_newsletter';
-  $handler->display->display_options['filters']['field_newsletter_value']['field'] = 'field_newsletter_value';
-  $handler->display->display_options['filters']['field_newsletter_value']['operator'] = 'not empty';
-  $handler->display->display_options['filters']['field_newsletter_value']['value'] = array();
+  /* Filter criterion: File: Merkingar (field_document_tags) */
+  $handler->display->display_options['filters']['field_document_tags_tid']['id'] = 'field_document_tags_tid';
+  $handler->display->display_options['filters']['field_document_tags_tid']['table'] = 'field_data_field_document_tags';
+  $handler->display->display_options['filters']['field_document_tags_tid']['field'] = 'field_document_tags_tid';
+  $handler->display->display_options['filters']['field_document_tags_tid']['value'] = array(
+    37 => '37',
+  );
+  $handler->display->display_options['filters']['field_document_tags_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_document_tags_tid']['vocabulary'] = 'files';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;

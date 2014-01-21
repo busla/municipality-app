@@ -5,18 +5,12 @@
  */
 
 /**
- * Implements hook_entityqueue_api().
- */
-function municipality_ct_entityqueue_api($module = NULL, $api = NULL) {
-  if ($module == "entityqueue" && $api == "entityqueue_default") {
-    return array("version" => "1");
-  }
-}
-
-/**
  * Implements hook_ctools_plugin_api().
  */
 function municipality_ct_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "entityqueue" && $api == "entityqueue_default") {
+    return array("version" => "1");
+  }
   if ($module == "file_entity" && $api == "file_default_displays") {
     return array("version" => "1");
   }
