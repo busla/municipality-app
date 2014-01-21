@@ -290,7 +290,7 @@ function municipality_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -365,7 +365,7 @@ function municipality_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -443,7 +443,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'options',
       'settings' => array(
         'shs' => array(
           'create_new_levels' => 0,
@@ -452,7 +452,7 @@ function municipality_ct_field_default_field_instances() {
           'node_count' => 0,
         ),
       ),
-      'type' => 'taxonomy_shs',
+      'type' => 'options_select',
       'weight' => 1,
     ),
   );
@@ -533,7 +533,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'options',
       'settings' => array(
         'shs' => array(
           'create_new_levels' => 0,
@@ -542,7 +542,7 @@ function municipality_ct_field_default_field_instances() {
           'node_count' => 0,
         ),
       ),
-      'type' => 'taxonomy_shs',
+      'type' => 'options_select',
       'weight' => 4,
     ),
   );
@@ -730,7 +730,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'options',
       'settings' => array(
         'shs' => array(
           'create_new_levels' => 1,
@@ -739,7 +739,7 @@ function municipality_ct_field_default_field_instances() {
           'node_count' => 0,
         ),
       ),
-      'type' => 'taxonomy_shs',
+      'type' => 'options_select',
       'weight' => 2,
     ),
   );
@@ -955,7 +955,7 @@ function municipality_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 10,
+      'weight' => 4,
     ),
   );
 
@@ -997,7 +997,7 @@ function municipality_ct_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 12,
+      'weight' => 6,
     ),
   );
 
@@ -1035,7 +1035,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'options',
       'settings' => array(
         'shs' => array(
           'create_new_levels' => 1,
@@ -1044,8 +1044,8 @@ function municipality_ct_field_default_field_instances() {
           'node_count' => 0,
         ),
       ),
-      'type' => 'taxonomy_shs',
-      'weight' => 9,
+      'type' => 'options_select',
+      'weight' => 2,
     ),
   );
 
@@ -1100,7 +1100,7 @@ function municipality_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
+      'weight' => 7,
     ),
   );
 
@@ -1170,7 +1170,7 @@ function municipality_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 11,
+      'weight' => 5,
     ),
   );
 
@@ -1224,14 +1224,18 @@ function municipality_ct_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 16,
+      'weight' => 8,
     ),
   );
 
   // Exported field_instance: 'node-post-field_settings'
   $field_instances['node-post-field_settings'] = array(
     'bundle' => 'post',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 5,
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Stillingar með færslu. ',
     'display' => array(
@@ -1261,7 +1265,7 @@ function municipality_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 3,
     ),
   );
 
@@ -1438,7 +1442,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'options',
       'settings' => array(
         'shs' => array(
           'create_new_levels' => 0,
@@ -1447,7 +1451,7 @@ function municipality_ct_field_default_field_instances() {
           'node_count' => 0,
         ),
       ),
-      'type' => 'taxonomy_shs',
+      'type' => 'options_select',
       'weight' => 1,
     ),
   );
@@ -1737,16 +1741,18 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'taxonomy',
       'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'shs' => array(
           'create_new_levels' => 0,
           'create_new_terms' => 1,
           'force_deepest' => 0,
           'node_count' => 0,
         ),
+        'size' => 60,
       ),
-      'type' => 'taxonomy_shs',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 3,
     ),
   );
@@ -1775,16 +1781,18 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'taxonomy',
       'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'shs' => array(
           'create_new_levels' => 0,
           'create_new_terms' => 1,
           'force_deepest' => 0,
           'node_count' => 0,
         ),
+        'size' => 60,
       ),
-      'type' => 'taxonomy_shs',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 1,
     ),
   );
@@ -1893,16 +1901,18 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'taxonomy',
       'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'shs' => array(
           'create_new_levels' => 0,
           'create_new_terms' => 1,
           'force_deepest' => 0,
           'node_count' => 0,
         ),
+        'size' => 60,
       ),
-      'type' => 'taxonomy_shs',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 3,
     ),
   );

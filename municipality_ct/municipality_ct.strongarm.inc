@@ -277,7 +277,7 @@ function municipality_ct_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '1',
         ),
       ),
       'display' => array(),
@@ -1540,14 +1540,14 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_file_document_pattern';
-  $strongarm->value = 'skjol/[file:name]';
+  $strongarm->value = 'skjal/[file:field-document-title]';
   $export['pathauto_file_document_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_file_image_pattern';
-  $strongarm->value = 'myndir/[file:name]';
+  $strongarm->value = 'mynd/[file:field-file-image-title-text]';
   $export['pathauto_file_image_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
