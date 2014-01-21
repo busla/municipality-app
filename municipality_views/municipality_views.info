@@ -94,7 +94,6 @@ features[variable][] = page_manager_contact_user_disabled
 features[variable][] = page_manager_node_view_disabled
 features[variable][] = page_manager_search_disabled_node
 features[variable][] = page_manager_term_view_disabled
-features[variable][] = pathauto_taxonomy_term_files_pattern
 features[variable][] = views_defaults
 features[views_view][] = clone_of_gmap
 features[views_view][] = committees

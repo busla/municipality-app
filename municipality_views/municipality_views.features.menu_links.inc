@@ -29,7 +29,7 @@ function municipality_views_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'menu-manager_vinnubekkur:admin/workbench',
+    'parent_identifier' => 'menu-manager_my-workbench:admin/workbench',
   );
   // Exported menu link: menu-manager_fundarger:node/add/report
   $menu_links['menu-manager_fundarger:node/add/report'] = array(
@@ -50,7 +50,7 @@ function municipality_views_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'menu-manager_vinnubekkur:admin/workbench',
+    'parent_identifier' => 'menu-manager_my-workbench:admin/workbench',
   );
   // Exported menu link: menu-manager_knnun:node/add/poll
   $menu_links['menu-manager_knnun:node/add/poll'] = array(
@@ -71,7 +71,7 @@ function municipality_views_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'menu-manager_vinnubekkur:admin/workbench',
+    'parent_identifier' => 'menu-manager_my-workbench:admin/workbench',
   );
   // Exported menu link: menu-manager_nefnd:node/add/committees
   $menu_links['menu-manager_nefnd:node/add/committees'] = array(
@@ -92,7 +92,7 @@ function municipality_views_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -47,
     'customized' => 1,
-    'parent_identifier' => 'menu-manager_vinnubekkur:admin/workbench',
+    'parent_identifier' => 'menu-manager_my-workbench:admin/workbench',
   );
   // Exported menu link: menu-manager_skr:admin/content/file
   $menu_links['menu-manager_skr:admin/content/file'] = array(
@@ -113,7 +113,7 @@ function municipality_views_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -46,
     'customized' => 1,
-    'parent_identifier' => 'menu-manager_vinnubekkur:admin/workbench',
+    'parent_identifier' => 'menu-manager_my-workbench:admin/workbench',
   );
   // Exported menu link: menu-manager_starfsmaur:node/add/staff
   $menu_links['menu-manager_starfsmaur:node/add/staff'] = array(
@@ -134,7 +134,7 @@ function municipality_views_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -45,
     'customized' => 1,
-    'parent_identifier' => 'menu-manager_vinnubekkur:admin/workbench',
+    'parent_identifier' => 'menu-manager_my-workbench:admin/workbench',
   );
   // Exported menu link: menu-manager_staur:node/add/place
   $menu_links['menu-manager_staur:node/add/place'] = array(
@@ -155,7 +155,7 @@ function municipality_views_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -44,
     'customized' => 1,
-    'parent_identifier' => 'menu-manager_vinnubekkur:admin/workbench',
+    'parent_identifier' => 'menu-manager_my-workbench:admin/workbench',
   );
   // Exported menu link: menu-manager_vinnubekkur:admin/workbench
   $menu_links['menu-manager_vinnubekkur:admin/workbench'] = array(
