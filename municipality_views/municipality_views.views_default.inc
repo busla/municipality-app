@@ -889,7 +889,7 @@ function municipality_views_views_default_views() {
 </div>
    [field_body]';
   $handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
-  /* Field: Content: Hlekkur */
+  /* Field: Content: Hlekkir */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -1349,7 +1349,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_body']['alter']['more_link_path'] = '[path]';
   $handler->display->display_options['fields']['field_body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
-  /* Field: Content: Hlekkur */
+  /* Field: Content: Hlekkir */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -1673,6 +1673,8 @@ function municipality_views_views_default_views() {
     'title' => 'title',
     'field_party' => 'field_party',
     'field_job_title' => 'field_job_title',
+    'delete' => 'delete',
+    'edit' => 'edit',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -1696,6 +1698,20 @@ function municipality_views_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+    ),
+    'delete' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'edit' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1740,6 +1756,20 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_job_title']['relationship'] = 'relation_base_left_committee_members';
   $handler->display->display_options['fields']['field_job_title']['label'] = 'Titill';
   $handler->display->display_options['fields']['field_job_title']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Relation: Delete link */
+  $handler->display->display_options['fields']['delete']['id'] = 'delete';
+  $handler->display->display_options['fields']['delete']['table'] = 'relation';
+  $handler->display->display_options['fields']['delete']['field'] = 'delete';
+  $handler->display->display_options['fields']['delete']['relationship'] = 'relation_base_left_committee_members';
+  $handler->display->display_options['fields']['delete']['label'] = 'Eyða';
+  $handler->display->display_options['fields']['delete']['text'] = 'Eyða';
+  /* Field: Relation: Edit link */
+  $handler->display->display_options['fields']['edit']['id'] = 'edit';
+  $handler->display->display_options['fields']['edit']['table'] = 'relation';
+  $handler->display->display_options['fields']['edit']['field'] = 'edit';
+  $handler->display->display_options['fields']['edit']['relationship'] = 'relation_base_left_committee_members';
+  $handler->display->display_options['fields']['edit']['label'] = 'Breyta';
+  $handler->display->display_options['fields']['edit']['text'] = 'Breyta';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -2500,7 +2530,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_attachment']['field'] = 'field_attachment';
   $handler->display->display_options['fields']['field_attachment']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_attachment']['delta_offset'] = '0';
-  /* Field: Content: Opnunartími */
+  /* Field: Content: Tímasetningar */
   $handler->display->display_options['fields']['field_dates']['id'] = 'field_dates';
   $handler->display->display_options['fields']['field_dates']['table'] = 'field_data_field_dates';
   $handler->display->display_options['fields']['field_dates']['field'] = 'field_dates';
@@ -2558,7 +2588,7 @@ function municipality_views_views_default_views() {
   );
   $handler->display->display_options['filters']['field_settings_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_settings_tid']['vocabulary'] = 'settings';
-  /* Filter criterion: Content: Opnunartími -  start date (field_dates) */
+  /* Filter criterion: Content: Tímasetningar -  start date (field_dates) */
   $handler->display->display_options['filters']['field_dates_value']['id'] = 'field_dates_value';
   $handler->display->display_options['filters']['field_dates_value']['table'] = 'field_data_field_dates';
   $handler->display->display_options['filters']['field_dates_value']['field'] = 'field_dates_value';
@@ -2980,12 +3010,11 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_job_title']['table'] = 'field_data_field_job_title';
   $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
   $handler->display->display_options['fields']['field_job_title']['type'] = 'taxonomy_term_reference_plain';
-  /* Sort criterion: Field: Tímabil - end date (field_period:value2) */
-  $handler->display->display_options['sorts']['field_period_value2']['id'] = 'field_period_value2';
-  $handler->display->display_options['sorts']['field_period_value2']['table'] = 'field_data_field_period';
-  $handler->display->display_options['sorts']['field_period_value2']['field'] = 'field_period_value2';
-  $handler->display->display_options['sorts']['field_period_value2']['relationship'] = 'relation_base_committee_members_node_1';
-  $handler->display->display_options['sorts']['field_period_value2']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  $handler->display->display_options['sorts']['title']['relationship'] = 'relation_base_committee_members_node_1';
   /* Filter criterion: Relation: Relation type */
   $handler->display->display_options['filters']['relation_type']['id'] = 'relation_type';
   $handler->display->display_options['filters']['relation_type']['table'] = 'relation';
@@ -3046,6 +3075,16 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['filters']['field_period_value2']['granularity'] = 'second';
   $handler->display->display_options['filters']['field_period_value2']['default_date'] = 'now';
   $handler->display->display_options['filters']['field_period_value2']['year_range'] = '-10:+6';
+  /* Filter criterion: Content: Nefndarflokkur (field_board_type) */
+  $handler->display->display_options['filters']['field_board_type_tid']['id'] = 'field_board_type_tid';
+  $handler->display->display_options['filters']['field_board_type_tid']['table'] = 'field_data_field_board_type';
+  $handler->display->display_options['filters']['field_board_type_tid']['field'] = 'field_board_type_tid';
+  $handler->display->display_options['filters']['field_board_type_tid']['relationship'] = 'relation_base_committee_members_node';
+  $handler->display->display_options['filters']['field_board_type_tid']['value'] = array(
+    15 => '15',
+  );
+  $handler->display->display_options['filters']['field_board_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_board_type_tid']['vocabulary'] = 'committee';
   $handler->display->display_options['inherit_panels_path'] = '1';
   $export['relations_view'] = $view;
 

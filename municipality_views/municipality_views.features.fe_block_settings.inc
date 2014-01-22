@@ -168,6 +168,84 @@ function municipality_views_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['system-navigation'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'navigation',
+    'module' => 'system',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['system-powered-by'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'powered-by',
+    'module' => 'system',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 10,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 10,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['user-login'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'login',
+    'module' => 'user',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-uploaded_files-block_1'] = array(
     'cache' => 8,
     'custom' => 0,

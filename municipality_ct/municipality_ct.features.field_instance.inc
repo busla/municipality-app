@@ -469,7 +469,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'committees',
     'default_value' => array(
       0 => array(
-        'tid' => 10,
+        'tid' => 9,
       ),
     ),
     'deleted' => 0,
@@ -499,14 +499,7 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'shs' => array(
-          'create_new_levels' => 0,
-          'create_new_terms' => 1,
-          'force_deepest' => 1,
-          'node_count' => 0,
-        ),
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 4,
     ),
@@ -668,7 +661,11 @@ function municipality_ct_field_default_field_instances() {
   // Exported field_instance: 'node-place-field_category'
   $field_instances['node-place-field_category'] = array(
     'bundle' => 'place',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 13,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -696,14 +693,7 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'shs' => array(
-          'create_new_levels' => 1,
-          'create_new_terms' => 1,
-          'force_deepest' => 0,
-          'node_count' => 0,
-        ),
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 2,
     ),
@@ -971,7 +961,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'post',
     'default_value' => array(
       0 => array(
-        'tid' => 4,
+        'tid' => 6,
       ),
     ),
     'deleted' => 0,
@@ -1001,14 +991,7 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'shs' => array(
-          'create_new_levels' => 1,
-          'create_new_terms' => 1,
-          'force_deepest' => 1,
-          'node_count' => 0,
-        ),
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 2,
     ),
@@ -1378,7 +1361,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'reports',
     'default_value' => array(
       0 => array(
-        'tid' => 8,
+        'tid' => 10,
       ),
     ),
     'deleted' => 0,
@@ -1408,14 +1391,7 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'shs' => array(
-          'create_new_levels' => 0,
-          'create_new_terms' => 1,
-          'force_deepest' => 0,
-          'node_count' => 0,
-        ),
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 1,
     ),
