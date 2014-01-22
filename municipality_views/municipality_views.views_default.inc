@@ -3792,55 +3792,6 @@ function municipality_views_views_default_views() {
     ),
   );
   $handler->display->display_options['inherit_panels_path'] = '0';
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: File: Title Text */
-  $handler->display->display_options['fields']['field_file_image_title_text']['id'] = 'field_file_image_title_text';
-  $handler->display->display_options['fields']['field_file_image_title_text']['table'] = 'field_data_field_file_image_title_text';
-  $handler->display->display_options['fields']['field_file_image_title_text']['field'] = 'field_file_image_title_text';
-  $handler->display->display_options['fields']['field_file_image_title_text']['label'] = '';
-  $handler->display->display_options['fields']['field_file_image_title_text']['element_label_colon'] = FALSE;
-  /* Field: File: Rendered */
-  $handler->display->display_options['fields']['rendered']['id'] = 'rendered';
-  $handler->display->display_options['fields']['rendered']['table'] = 'file_managed';
-  $handler->display->display_options['fields']['rendered']['field'] = 'rendered';
-  $handler->display->display_options['fields']['rendered']['label'] = '';
-  $handler->display->display_options['fields']['rendered']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['rendered']['file_view_mode'] = 'half_screen';
-  /* Field: File: Alt Text */
-  $handler->display->display_options['fields']['field_file_image_alt_text']['id'] = 'field_file_image_alt_text';
-  $handler->display->display_options['fields']['field_file_image_alt_text']['table'] = 'field_data_field_file_image_alt_text';
-  $handler->display->display_options['fields']['field_file_image_alt_text']['field'] = 'field_file_image_alt_text';
-  $handler->display->display_options['fields']['field_file_image_alt_text']['label'] = '';
-  $handler->display->display_options['fields']['field_file_image_alt_text']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: File: File ID */
-  $handler->display->display_options['arguments']['fid']['id'] = 'fid';
-  $handler->display->display_options['arguments']['fid']['table'] = 'file_managed';
-  $handler->display->display_options['arguments']['fid']['field'] = 'fid';
-  $handler->display->display_options['arguments']['fid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['fid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['fid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['fid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['fid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: File: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'file_managed';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'image' => 'image',
-  );
-  $handler->display->display_options['path'] = 'file/%file';
   $export['uploaded_files'] = $view;
 
   return $export;

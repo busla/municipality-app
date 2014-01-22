@@ -477,7 +477,7 @@ function municipality_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'gmap_marker_file';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['gmap_marker_file'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1060,6 +1060,7 @@ function municipality_ct_strongarm() {
       'min' => '0',
       'max' => '0',
       'add' => '1',
+      'location_addanother' => 0,
     ),
     'form' => array(
       'weight' => '0',
@@ -1116,11 +1117,6 @@ function municipality_ct_strongarm() {
           'default' => '',
           'weight' => '25',
         ),
-        'fax' => array(
-          'collect' => '0',
-          'default' => '',
-          'weight' => '30',
-        ),
       ),
     ),
     'display' => array(
@@ -1135,7 +1131,6 @@ function municipality_ct_strongarm() {
         'country' => 0,
         'locpick' => 0,
         'email' => 0,
-        'fax' => 0,
         'phone' => 0,
         'province_name' => 0,
         'country_name' => 0,
