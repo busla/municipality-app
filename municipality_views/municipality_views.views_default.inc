@@ -200,27 +200,6 @@ function municipality_views_views_default_views() {
       'label' => 'Content: Nid',
     ),
   );
-  $translatables['clone_of_gmap'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('All'),
-    t('Staðsetning'),
-    t('Kort'),
-    t('View panes'),
-    t('Info'),
-  );
   $export['clone_of_gmap'] = $view;
 
   $view = new view();
@@ -599,34 +578,6 @@ function municipality_views_views_default_views() {
       'label' => 'Content: Has taxonomy term ID depth modifier',
     ),
   );
-  $translatables['committees'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Listi'),
-    t('Allar nefndir'),
-    t('Heiti'),
-    t('Tímabil'),
-    t('Breyta'),
-    t('Eyða'),
-    t('All'),
-    t('%1'),
-    t('Date (node)'),
-    t('View panes'),
-    t('eldri nefndir'),
-    t('Sveitastjórn'),
-  );
   $export['committees'] = $view;
 
   $view = new view();
@@ -713,26 +664,6 @@ function municipality_views_views_default_views() {
       'fixed' => '',
       'label' => 'Content: Nid',
     ),
-  );
-  $translatables['gmap'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('All'),
-    t('Staðsetning'),
-    t('Content pane'),
-    t('View panes'),
   );
   $export['gmap'] = $view;
 
@@ -1053,43 +984,6 @@ function municipality_views_views_default_views() {
       'fixed' => '',
       'label' => 'Content: Nid',
     ),
-  );
-  $translatables['locations'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Um starfsmann'),
-    t('All'),
-    t('Staðsetning'),
-    t('Kort'),
-    t('View panes'),
-    t('Stakur staður'),
-    t('<div class="location-image">
-  [field_image]  
-</div>
-  [field_body]'),
-    t('Context'),
-    t('<h4><span class="glyphicon glyphicon-envelope"></span> [email]</h4>'),
-    t('<h4><span class="glyphicon glyphicon-print"></span> [fax]</h4>'),
-    t('<h4><span class="glyphicon glyphicon-phone-alt"></span> [phone]</h4>'),
-    t('<div class="location-image">
-  [field_image]
-</div>
-   [field_body]'),
-    t('<h4><span class="glyphicon glyphicon-link"></span> [field_link]</h4>'),
-    t('Listi'),
-    t('Aðrir staðir'),
   );
   $export['locations'] = $view;
 
@@ -2835,61 +2729,6 @@ function municipality_views_views_default_views() {
       'label' => 'Content: Nid',
     ),
   );
-  $translatables['municipality_posts'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Myndir með færslu'),
-    t('Fréttir'),
-    t('File'),
-    t('<a href="[uri]">[rendered]</a>'),
-    t('All'),
-    t('View panes'),
-    t('Safn'),
-    t('Fréttasafn'),
-    t('Titill'),
-    t('Dagsetning'),
-    t('Viðhengi'),
-    t('%1'),
-    t('Type'),
-    t('Síður'),
-    t('meira'),
-    t('Hlekkur'),
-    t('Fylgigögn'),
-    t('Staðir'),
-    t('Stjórnkerfið'),
-    t('Nefndarmenn'),
-    t('Nefnd'),
-    t('Fulltrúi'),
-    t('Listi'),
-    t('Breyta'),
-    t('Eyða'),
-    t('Núverandi sveitastjórn'),
-    t('Fundargerðir'),
-    t('Nýjustu fundargerðir'),
-    t('Nefndarflokkur'),
-    t('Viðbótargögn'),
-    t('Tengt'),
-    t('Forsíðufréttir'),
-    t('Nýjustu fréttir'),
-    t('author'),
-    t('Fundargerðir filter'),
-    t('Fundargerðir nefndar'),
-    t('Færslulisti'),
-    t('Stillingar (field_settings)'),
-    t('Stök færsla'),
-  );
   $export['municipality_posts'] = $view;
 
   $view = new view();
@@ -3110,35 +2949,6 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-  $translatables['municipality_sidebar'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Term ID'),
-    t('.'),
-    t(','),
-    t('Hliðarstika'),
-    t('All'),
-    t('%1'),
-    t('View panes'),
-    t('Yfirlit'),
-    t('node'),
-    t('Nefndir'),
-    t('Veldu nefnd úr listanum'),
-    t('Veldu nefnd úr listanum.'),
-    t('taxonomy/term/[tid]'),
-  );
   $export['municipality_sidebar'] = $view;
 
   $view = new view();
@@ -3229,7 +3039,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['sorts']['title']['relationship'] = 'relation_base_committee_members_node_1';
-  /* Filter criterion: Relation: Hvernig tenging */
+  /* Filter criterion: Relation: Relation type */
   $handler->display->display_options['filters']['relation_type']['id'] = 'relation_type';
   $handler->display->display_options['filters']['relation_type']['table'] = 'relation';
   $handler->display->display_options['filters']['relation_type']['field'] = 'relation_type';
@@ -3273,7 +3083,7 @@ function municipality_views_views_default_views() {
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Relation: Hvernig tenging */
+  /* Filter criterion: Relation: Relation type */
   $handler->display->display_options['filters']['relation_type']['id'] = 'relation_type';
   $handler->display->display_options['filters']['relation_type']['table'] = 'relation';
   $handler->display->display_options['filters']['relation_type']['field'] = 'relation_type';
@@ -3300,31 +3110,6 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['filters']['field_board_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_board_type_tid']['vocabulary'] = 'committee';
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $translatables['relations_view'] = array(
-    t('Master'),
-    t('Sveitastjórn'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Nefndarmenn-source'),
-    t('Nefndarmenn-target'),
-    t('term from field_board_type'),
-    t('Title'),
-    t('Listi'),
-    t('Starfsheiti'),
-    t('Tímabil'),
-    t('View panes'),
-  );
   $export['relations_view'] = $view;
 
   $view = new view();
@@ -3715,35 +3500,6 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-  $translatables['skeidgnup_meetings'] = array(
-    t('Master'),
-    t('Fundargerðir'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('All'),
-    t('%1'),
-    t('Listi'),
-    t('View panes'),
-    t('Tengt'),
-    t('Nefnd'),
-    t('Nefndarmenn (rel)'),
-    t('Nefndarmenn'),
-    t('Nafn'),
-    t('Viðhengi'),
-    t('Forsíða'),
-    t('Titill'),
-  );
   $export['skeidgnup_meetings'] = $view;
 
   $view = new view();
@@ -4109,22 +3865,13 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'flexslider';
-  $handler->display->display_options['style_options']['optionset'] = 'slideshow';
+  $handler->display->display_options['style_options']['optionset'] = 'frontpage';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entityqueue: File Queue */
-  $handler->display->display_options['relationships']['entityqueue_relationship']['id'] = 'entityqueue_relationship';
-  $handler->display->display_options['relationships']['entityqueue_relationship']['table'] = 'file_managed';
-  $handler->display->display_options['relationships']['entityqueue_relationship']['field'] = 'entityqueue_relationship';
-  $handler->display->display_options['relationships']['entityqueue_relationship']['required'] = TRUE;
-  $handler->display->display_options['relationships']['entityqueue_relationship']['limit'] = 1;
-  $handler->display->display_options['relationships']['entityqueue_relationship']['queues'] = array(
-    'slideshow' => 'slideshow',
-  );
   /* Relationship: Entityqueue: File Queue */
   $handler->display->display_options['relationships']['entityqueue_relationship_1']['id'] = 'entityqueue_relationship_1';
   $handler->display->display_options['relationships']['entityqueue_relationship_1']['table'] = 'file_managed';
@@ -4134,6 +3881,11 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['relationships']['entityqueue_relationship_1']['queues'] = array(
     'slideshow' => 'slideshow',
   );
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_eq_file_entityqueue_subqueue']['id'] = 'reverse_eq_file_entityqueue_subqueue';
+  $handler->display->display_options['relationships']['reverse_eq_file_entityqueue_subqueue']['table'] = 'file_managed';
+  $handler->display->display_options['relationships']['reverse_eq_file_entityqueue_subqueue']['field'] = 'reverse_eq_file_entityqueue_subqueue';
+  $handler->display->display_options['relationships']['reverse_eq_file_entityqueue_subqueue']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: File: Rendered */
   $handler->display->display_options['fields']['rendered']['id'] = 'rendered';
@@ -4143,38 +3895,6 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['rendered']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['rendered']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['rendered']['file_view_mode'] = 'half_screen';
-  $translatables['uploaded_files'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Myndir'),
-    t('Merkingar'),
-    t('View panes'),
-    t('Eyðublöð'),
-    t('Teg.'),
-    t('Heiti'),
-    t('Skrá'),
-    t('<span class="icon-download"></span>[download] '),
-    t('Sækja'),
-    t('Stærð'),
-    t('All'),
-    t('Merkingar (field_document_tags)'),
-    t('Carousel'),
-    t('Fréttabréf'),
-    t('Slideshow'),
-    t('File Queue'),
-  );
   $export['uploaded_files'] = $view;
 
   return $export;
