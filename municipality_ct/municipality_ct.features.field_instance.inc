@@ -370,7 +370,7 @@ function municipality_ct_field_default_field_instances() {
       'settings' => array(
         'relation_endpoint_custom_label' => 'Nefndarmenn',
         'relation_endpoint_label' => 'custom',
-        'relation_endpoint_label_delta' => 0,
+        'relation_endpoint_label_delta' => 1,
         'relation_endpoint_search_by_id' => 0,
       ),
       'type' => 'relation_add',
@@ -661,11 +661,7 @@ function municipality_ct_field_default_field_instances() {
   // Exported field_instance: 'node-place-field_category'
   $field_instances['node-place-field_category'] = array(
     'bundle' => 'place',
-    'default_value' => array(
-      0 => array(
-        'tid' => 13,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -693,7 +689,14 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 1,
+          'create_new_terms' => 1,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
       'type' => 'options_select',
       'weight' => 2,
     ),
@@ -961,7 +964,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'post',
     'default_value' => array(
       0 => array(
-        'tid' => 6,
+        'tid' => 4,
       ),
     ),
     'deleted' => 0,
@@ -991,7 +994,14 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 1,
+          'create_new_terms' => 1,
+          'force_deepest' => 1,
+          'node_count' => 0,
+        ),
+      ),
       'type' => 'options_select',
       'weight' => 2,
     ),
@@ -1085,7 +1095,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'mupload',
+      'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -1117,7 +1127,7 @@ function municipality_ct_field_default_field_instances() {
         ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_mupload',
+      'type' => 'media_generic',
       'weight' => 5,
     ),
   );
@@ -1250,7 +1260,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'mupload',
+      'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -1268,8 +1278,8 @@ function municipality_ct_field_default_field_instances() {
         ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_mupload',
-      'weight' => 3,
+      'type' => 'media_generic',
+      'weight' => 5,
     ),
   );
 
@@ -1310,7 +1320,7 @@ function municipality_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -1352,7 +1362,7 @@ function municipality_ct_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -1361,7 +1371,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'reports',
     'default_value' => array(
       0 => array(
-        'tid' => 10,
+        'tid' => 8,
       ),
     ),
     'deleted' => 0,
@@ -1391,7 +1401,14 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 1,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
       'type' => 'options_select',
       'weight' => 1,
     ),
@@ -1437,7 +1454,7 @@ function municipality_ct_field_default_field_instances() {
         'relation_endpoint_search_by_id' => 0,
       ),
       'type' => 'relation_add',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 

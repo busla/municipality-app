@@ -12,6 +12,7 @@ dependencies[] = fb_social
 dependencies[] = fe_block
 dependencies[] = features
 dependencies[] = file_entity
+dependencies[] = flexslider_views
 dependencies[] = gmap
 dependencies[] = jcarousel
 dependencies[] = menu
