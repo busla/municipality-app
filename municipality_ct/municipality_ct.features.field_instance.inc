@@ -1085,7 +1085,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'mupload',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -1117,7 +1117,7 @@ function municipality_ct_field_default_field_instances() {
         ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'file_mupload',
       'weight' => 5,
     ),
   );
@@ -1250,7 +1250,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'mupload',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -1268,8 +1268,8 @@ function municipality_ct_field_default_field_instances() {
         ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
-      'weight' => 5,
+      'type' => 'file_mupload',
+      'weight' => 3,
     ),
   );
 
@@ -1310,7 +1310,7 @@ function municipality_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -1352,7 +1352,7 @@ function municipality_ct_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -1437,7 +1437,7 @@ function municipality_ct_field_default_field_instances() {
         'relation_endpoint_search_by_id' => 0,
       ),
       'type' => 'relation_add',
-      'weight' => 6,
+      'weight' => 2,
     ),
   );
 

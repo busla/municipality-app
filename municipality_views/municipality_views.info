@@ -13,6 +13,7 @@ dependencies[] = fe_block
 dependencies[] = features
 dependencies[] = file_entity
 dependencies[] = gmap
+dependencies[] = jcarousel
 dependencies[] = menu
 dependencies[] = menu_block
 dependencies[] = municipality_ct

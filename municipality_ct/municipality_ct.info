@@ -41,6 +41,7 @@ dependencies[] = media
 dependencies[] = media_colorbox
 dependencies[] = migrate
 dependencies[] = migrate_ui
+dependencies[] = mupload
 dependencies[] = options
 dependencies[] = pathauto
 dependencies[] = plupload
