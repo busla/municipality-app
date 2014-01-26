@@ -805,12 +805,6 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['email']['field'] = 'email';
   $handler->display->display_options['fields']['email']['label'] = '';
   $handler->display->display_options['fields']['email']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['fax']['id'] = 'fax';
-  $handler->display->display_options['fields']['fax']['table'] = 'location_fax';
-  $handler->display->display_options['fields']['fax']['field'] = 'fax';
-  $handler->display->display_options['fields']['fax']['label'] = '';
-  $handler->display->display_options['fields']['fax']['element_label_colon'] = FALSE;
   /* Field: Location: Phone */
   $handler->display->display_options['fields']['phone']['id'] = 'phone';
   $handler->display->display_options['fields']['phone']['table'] = 'location_phone';
@@ -1054,7 +1048,6 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['nid']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['nid']['title'] = 'Aðrir staðir';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
@@ -1062,11 +1055,20 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
       'type' => 'context',
       'context' => 'entity:node.nid',
-      'context_optional' => 0,
+      'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: Nid',
@@ -1271,7 +1273,7 @@ function municipality_views_views_default_views() {
     'field_attachment' => array(
       'align' => '',
       'separator' => '',
-      'empty_column' => 0,
+      'empty_column' => 1,
     ),
   );
   $handler->display->display_options['style_options']['override'] = FALSE;
