@@ -1406,7 +1406,7 @@ function municipality_ct_field_default_field_instances() {
     'bundle' => 'reports',
     'default_value' => array(
       0 => array(
-        'tid' => 8,
+        'tid' => 10,
       ),
     ),
     'deleted' => 0,
@@ -1436,14 +1436,7 @@ function municipality_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'shs' => array(
-          'create_new_levels' => 0,
-          'create_new_terms' => 1,
-          'force_deepest' => 0,
-          'node_count' => 0,
-        ),
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 1,
     ),
