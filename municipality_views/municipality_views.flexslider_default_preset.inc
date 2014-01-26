@@ -44,7 +44,7 @@ function municipality_views_flexslider_default_presets() {
     'move' => '0',
     'animation' => 'slide',
     'slideshow' => 1,
-    'slideshowSpeed' => '2000',
+    'slideshowSpeed' => '5000',
     'directionNav' => 1,
     'controlNav' => '0',
     'prevText' => 'Previous',
