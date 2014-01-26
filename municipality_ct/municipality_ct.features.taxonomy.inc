@@ -13,7 +13,7 @@ function municipality_ct_taxonomy_default_vocabularies() {
       'name' => 'Flokkur',
       'machine_name' => 'category',
       'description' => 'Flokkar fyrir valmynd.',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

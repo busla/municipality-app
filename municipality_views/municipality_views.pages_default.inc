@@ -677,10 +677,10 @@ function municipality_views_default_page_manager_handlers() {
         'id' => 1,
       ),
       1 => array(
-        'identifier' => 'Term from node',
-        'keyword' => 'term',
-        'name' => 'term_from_node',
-        'vid' => '6',
+        'identifier' => 'Taxonomy term from Node (on Node: Nefndarflokkur [field_board_type])',
+        'keyword' => 'taxonomy_term_2',
+        'name' => 'entity_from_field:field_board_type-node-taxonomy_term',
+        'delta' => 0,
         'context' => 'argument_entity_id:node_1',
         'id' => 1,
       ),
@@ -884,8 +884,7 @@ function municipality_views_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => array(
         0 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
-        1 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
-        2 => 'argument_entity_id:node_1',
+        1 => 'argument_entity_id:node_1',
       ),
       'fields_override' => array(
         'title' => 1,
@@ -1446,50 +1445,6 @@ function municipality_views_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-31'] = $pane;
     $display->panels['left'][0] = 'new-31';
-    $pane = new stdClass();
-    $pane->pid = 'new-32';
-    $pane->panel = 'right';
-    $pane->type = 'search_form';
-    $pane->subtype = 'search_form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'type' => 'node',
-      'form' => 'advanced',
-      'path_type' => 'default',
-      'path' => '',
-      'override_prompt' => 0,
-      'prompt' => '',
-      'context' => 'empty',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => array(
-        'modifier_class' => '',
-        'collapsible' => 0,
-        'collapsed' => 0,
-        'hide_classes' => array(
-          'hidden-xs' => 0,
-          'hidden-sm' => 0,
-          'hidden-md' => 0,
-          'hidden-lg' => 0,
-        ),
-        'additional_classes' => array(
-          'pull-left' => 0,
-          'pull-right' => 0,
-          'clearfix' => 0,
-        ),
-      ),
-      'style' => 'bootstrap_styles:panel',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-32'] = $pane;
-    $display->panels['right'][0] = 'new-32';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1502,7 +1457,7 @@ function municipality_views_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -25;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'Fréttir',
     'no_blocks' => 1,
@@ -1555,7 +1510,7 @@ function municipality_views_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-33';
+    $pane->pid = 'new-32';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'municipality_posts-panel_pane_2';
@@ -1599,8 +1554,8 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-33'] = $pane;
-    $display->panels['left'][0] = 'new-33';
+    $display->content['new-32'] = $pane;
+    $display->panels['left'][0] = 'new-32';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1613,7 +1568,7 @@ function municipality_views_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -24;
+  $handler->weight = -25;
   $handler->conf = array(
     'title' => 'Nefndarflokkur',
     'no_blocks' => 1,
@@ -1670,7 +1625,7 @@ function municipality_views_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-34';
+    $pane->pid = 'new-33';
     $pane->panel = 'left';
     $pane->type = 'page_breadcrumb';
     $pane->subtype = 'page_breadcrumb';
@@ -1696,10 +1651,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-34'] = $pane;
-    $display->panels['left'][0] = 'new-34';
+    $display->content['new-33'] = $pane;
+    $display->panels['left'][0] = 'new-33';
     $pane = new stdClass();
-    $pane->pid = 'new-35';
+    $pane->pid = 'new-34';
     $pane->panel = 'left';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -1721,10 +1676,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['left'][1] = 'new-35';
+    $display->content['new-34'] = $pane;
+    $display->panels['left'][1] = 'new-34';
     $pane = new stdClass();
-    $pane->pid = 'new-36';
+    $pane->pid = 'new-35';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'committees-panel_pane_2';
@@ -1761,10 +1716,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['left'][2] = 'new-36';
+    $display->content['new-35'] = $pane;
+    $display->panels['left'][2] = 'new-35';
     $pane = new stdClass();
-    $pane->pid = 'new-37';
+    $pane->pid = 'new-36';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'municipality_sidebar-panel_pane_3';
@@ -1798,8 +1753,8 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-37'] = $pane;
-    $display->panels['right'][0] = 'new-37';
+    $display->content['new-36'] = $pane;
+    $display->panels['right'][0] = 'new-36';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1812,7 +1767,7 @@ function municipality_views_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -26;
+  $handler->weight = -23;
   $handler->conf = array(
     'title' => 'Yfirlit',
     'no_blocks' => 1,
@@ -1827,7 +1782,7 @@ function municipality_views_default_page_manager_handlers() {
         'identifier' => 'Term parent',
         'keyword' => 'parent_term',
         'name' => 'term_parent',
-        'type' => 'parent',
+        'type' => 'top',
         'context' => 'argument_term_1',
         'id' => 1,
       ),
@@ -1835,49 +1790,11 @@ function municipality_views_default_page_manager_handlers() {
     'access' => array(
       'plugins' => array(
         0 => array(
-          'name' => 'term',
+          'name' => 'term_vocabulary',
           'settings' => array(
-            'vid' => '1',
-            1 => array(
-              8 => '8',
+            'machine_name' => array(
+              'category' => 'category',
             ),
-            3 => array(),
-            4 => array(),
-            2 => array(),
-            5 => array(),
-            6 => array(),
-          ),
-          'context' => 'argument_term_1',
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'term',
-          'settings' => array(
-            'vid' => '1',
-            1 => array(
-              12 => '12',
-            ),
-            3 => array(),
-            4 => array(),
-            2 => array(),
-            5 => array(),
-            6 => array(),
-          ),
-          'context' => 'argument_term_1',
-          'not' => FALSE,
-        ),
-        2 => array(
-          'name' => 'term',
-          'settings' => array(
-            'vid' => '1',
-            1 => array(
-              14 => '14',
-            ),
-            3 => array(),
-            4 => array(),
-            2 => array(),
-            5 => array(),
-            6 => array(),
           ),
           'context' => 'argument_term_1',
           'not' => FALSE,
@@ -1898,14 +1815,15 @@ function municipality_views_default_page_manager_handlers() {
       'right-row-one' => NULL,
       'right-row-two' => NULL,
       'right-row-three' => NULL,
+      'middle' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = 'Yfirlit';
+  $display->title = 'Yfirlit yfir flokkinn <em>%term:name</em>';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-38';
+    $pane->pid = 'new-37';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'municipality_sidebar-panel_pane_2';
@@ -1930,9 +1848,9 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-38'] = $pane;
-    $display->panels['middle'][0] = 'new-38';
-  $display->hide_title = PANELS_TITLE_PANE;
+    $display->content['new-37'] = $pane;
+    $display->panels['middle'][0] = 'new-37';
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context_3'] = $handler;
@@ -2003,7 +1921,7 @@ function municipality_views_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-39';
+    $pane->pid = 'new-38';
     $pane->panel = 'left';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -2025,10 +1943,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-39'] = $pane;
-    $display->panels['left'][0] = 'new-39';
+    $display->content['new-38'] = $pane;
+    $display->panels['left'][0] = 'new-38';
     $pane = new stdClass();
-    $pane->pid = 'new-40';
+    $pane->pid = 'new-39';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'municipality_posts-panel_pane_5';
@@ -2059,10 +1977,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-40'] = $pane;
-    $display->panels['left'][1] = 'new-40';
+    $display->content['new-39'] = $pane;
+    $display->panels['left'][1] = 'new-39';
     $pane = new stdClass();
-    $pane->pid = 'new-41';
+    $pane->pid = 'new-40';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
@@ -2080,8 +1998,8 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-41'] = $pane;
-    $display->panels['right'][0] = 'new-41';
+    $display->content['new-40'] = $pane;
+    $display->panels['right'][0] = 'new-40';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2171,7 +2089,7 @@ function municipality_views_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-42';
+    $pane->pid = 'new-41';
     $pane->panel = 'left';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -2193,10 +2111,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-42'] = $pane;
-    $display->panels['left'][0] = 'new-42';
+    $display->content['new-41'] = $pane;
+    $display->panels['left'][0] = 'new-41';
     $pane = new stdClass();
-    $pane->pid = 'new-43';
+    $pane->pid = 'new-42';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'committees-panel_pane_3';
@@ -2215,10 +2133,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-43'] = $pane;
-    $display->panels['left'][1] = 'new-43';
+    $display->content['new-42'] = $pane;
+    $display->panels['left'][1] = 'new-42';
     $pane = new stdClass();
-    $pane->pid = 'new-44';
+    $pane->pid = 'new-43';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
@@ -2236,8 +2154,8 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-44'] = $pane;
-    $display->panels['right'][0] = 'new-44';
+    $display->content['new-43'] = $pane;
+    $display->panels['right'][0] = 'new-43';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2309,7 +2227,7 @@ function municipality_views_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-45';
+    $pane->pid = 'new-44';
     $pane->panel = 'left';
     $pane->type = 'page_breadcrumb';
     $pane->subtype = 'page_breadcrumb';
@@ -2334,10 +2252,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-45'] = $pane;
-    $display->panels['left'][0] = 'new-45';
+    $display->content['new-44'] = $pane;
+    $display->panels['left'][0] = 'new-44';
     $pane = new stdClass();
-    $pane->pid = 'new-46';
+    $pane->pid = 'new-45';
     $pane->panel = 'left';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -2359,10 +2277,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-46'] = $pane;
-    $display->panels['left'][1] = 'new-46';
+    $display->content['new-45'] = $pane;
+    $display->panels['left'][1] = 'new-45';
     $pane = new stdClass();
-    $pane->pid = 'new-47';
+    $pane->pid = 'new-46';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'municipality_posts-panel_pane_3';
@@ -2384,10 +2302,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-47'] = $pane;
-    $display->panels['left'][2] = 'new-47';
+    $display->content['new-46'] = $pane;
+    $display->panels['left'][2] = 'new-46';
     $pane = new stdClass();
-    $pane->pid = 'new-48';
+    $pane->pid = 'new-47';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
@@ -2421,8 +2339,8 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-48'] = $pane;
-    $display->panels['right'][0] = 'new-48';
+    $display->content['new-47'] = $pane;
+    $display->panels['right'][0] = 'new-47';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2485,7 +2403,7 @@ function municipality_views_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-49';
+    $pane->pid = 'new-48';
     $pane->panel = 'left';
     $pane->type = 'page_breadcrumb';
     $pane->subtype = 'page_breadcrumb';
@@ -2510,10 +2428,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-49'] = $pane;
-    $display->panels['left'][0] = 'new-49';
+    $display->content['new-48'] = $pane;
+    $display->panels['left'][0] = 'new-48';
     $pane = new stdClass();
-    $pane->pid = 'new-50';
+    $pane->pid = 'new-49';
     $pane->panel = 'left';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
@@ -2535,10 +2453,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-50'] = $pane;
-    $display->panels['left'][1] = 'new-50';
+    $display->content['new-49'] = $pane;
+    $display->panels['left'][1] = 'new-49';
     $pane = new stdClass();
-    $pane->pid = 'new-51';
+    $pane->pid = 'new-50';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'committees-panel_pane_1';
@@ -2559,10 +2477,10 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-51'] = $pane;
-    $display->panels['left'][2] = 'new-51';
+    $display->content['new-50'] = $pane;
+    $display->panels['left'][2] = 'new-50';
     $pane = new stdClass();
-    $pane->pid = 'new-52';
+    $pane->pid = 'new-51';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
@@ -2596,8 +2514,8 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-52'] = $pane;
-    $display->panels['right'][0] = 'new-52';
+    $display->content['new-51'] = $pane;
+    $display->panels['right'][0] = 'new-51';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2610,7 +2528,7 @@ function municipality_views_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -23;
+  $handler->weight = -24;
   $handler->conf = array(
     'title' => 'Myndir',
     'no_blocks' => 1,
@@ -2651,7 +2569,7 @@ function municipality_views_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-53';
+    $pane->pid = 'new-52';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'uploaded_files-panel_pane_2';
@@ -2666,8 +2584,8 @@ function municipality_views_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-53'] = $pane;
-    $display->panels['middle'][0] = 'new-53';
+    $display->content['new-52'] = $pane;
+    $display->panels['middle'][0] = 'new-52';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3123,27 +3041,6 @@ function municipality_views_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-13'] = $pane;
     $display->panels['right-row-two'][3] = 'new-13';
-    $pane = new stdClass();
-    $pane->pid = 'new-14';
-    $pane->panel = 'search_form';
-    $pane->type = 'block';
-    $pane->subtype = 'search-form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['search_form'][0] = 'new-14';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3215,7 +3112,7 @@ function municipality_views_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-14';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'uploaded_files-panel_pane_2';
@@ -3230,8 +3127,8 @@ function municipality_views_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['middle'][0] = 'new-15';
+    $display->content['new-14'] = $pane;
+    $display->panels['middle'][0] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

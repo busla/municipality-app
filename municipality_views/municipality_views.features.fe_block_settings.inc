@@ -132,8 +132,8 @@ function municipality_views_default_fe_block_settings() {
         'weight' => 0,
       ),
       'skeidgnup_theme' => array(
-        'region' => 'header',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'skeidgnup_theme',
         'weight' => -15,
       ),

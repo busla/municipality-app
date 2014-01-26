@@ -208,8 +208,7 @@ function municipality_views_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_expanded';
   $strongarm->value = array(
-    0 => 'main-menu',
-    1 => 'menu-manager',
+    0 => 'menu-manager',
   );
   $export['menu_expanded'] = $strongarm;
 

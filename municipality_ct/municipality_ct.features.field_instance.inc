@@ -935,7 +935,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'mupload',
       'settings' => array(
         'allowed_schemes' => array(
           0 => 'public',
@@ -947,7 +947,7 @@ function municipality_ct_field_default_field_instances() {
         'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'file_mupload',
       'weight' => 4,
     ),
   );
@@ -1130,7 +1130,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'mupload',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -1162,7 +1162,7 @@ function municipality_ct_field_default_field_instances() {
         ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'file_mupload',
       'weight' => 5,
     ),
   );
@@ -1989,7 +1989,7 @@ function municipality_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 1,
     ),
   );
 

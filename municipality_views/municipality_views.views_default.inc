@@ -1780,6 +1780,12 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_job_title']['relationship'] = 'relation_base_left_committee_members';
   $handler->display->display_options['fields']['field_job_title']['label'] = 'Titill';
   $handler->display->display_options['fields']['field_job_title']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Netfang */
+  $handler->display->display_options['fields']['field_staff_email']['id'] = 'field_staff_email';
+  $handler->display->display_options['fields']['field_staff_email']['table'] = 'field_data_field_staff_email';
+  $handler->display->display_options['fields']['field_staff_email']['field'] = 'field_staff_email';
+  $handler->display->display_options['fields']['field_staff_email']['relationship'] = 'relation_base_committee_members_node';
+  $handler->display->display_options['fields']['field_staff_email']['delta_offset'] = '0';
   /* Field: Relation: Edit link */
   $handler->display->display_options['fields']['edit']['id'] = 'edit';
   $handler->display->display_options['fields']['edit']['table'] = 'relation';
@@ -2049,21 +2055,42 @@ function municipality_views_views_default_views() {
   /* Display: Tengt */
   $handler = $view->new_display('panel_pane', 'Tengt', 'panel_pane_9');
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'jump_menu';
-  $handler->display->display_options['style_options']['hide'] = TRUE;
-  $handler->display->display_options['style_options']['path'] = 'path';
-  $handler->display->display_options['style_options']['choose'] = '- Veldu nefnd -';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
+    'path' => 'path',
     'field_period' => 'field_period',
   );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'path' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_period' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -2088,7 +2115,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['field_period']['label'] = '';
   $handler->display->display_options['fields']['field_period']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_period']['settings'] = array(
-    'format_type' => 'short',
+    'format_type' => 'year',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -2101,28 +2128,19 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
-  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['term_node_tid_depth']['title'] = '%1';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
-  /* Contextual filter: Content: Has taxonomy term ID depth modifier */
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['id'] = 'term_node_tid_depth_modifier';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['table'] = 'node';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['field'] = 'term_node_tid_depth_modifier';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['summary']['format'] = 'default_summary';
+  /* Contextual filter: Content: Nefndarflokkur (field_board_type) */
+  $handler->display->display_options['arguments']['field_board_type_tid']['id'] = 'field_board_type_tid';
+  $handler->display->display_options['arguments']['field_board_type_tid']['table'] = 'field_data_field_board_type';
+  $handler->display->display_options['arguments']['field_board_type_tid']['field'] = 'field_board_type_tid';
+  $handler->display->display_options['arguments']['field_board_type_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_board_type_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_board_type_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_board_type_tid']['summary_options']['items_per_page'] = '25';
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
@@ -2137,6 +2155,13 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'committees' => 'committees',
+  );
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -2147,26 +2172,18 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
-    'term_node_tid_depth' => array(
+    'field_board_type_tid' => array(
       'type' => 'context',
       'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Content: Has taxonomy term ID (with depth)',
-    ),
-    'term_node_tid_depth_modifier' => array(
-      'type' => 'context',
-      'context' => 'entity:taxonomy_term.tid',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Content: Has taxonomy term ID depth modifier',
+      'label' => 'Content: Nefndarflokkur (field_board_type)',
     ),
     'nid' => array(
       'type' => 'context',
       'context' => 'entity:node.nid',
-      'context_optional' => 1,
+      'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: Nid',
@@ -2239,7 +2256,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  $handler->display->display_options['fields']['created']['date_format'] = 'extra_short';
   /* Field: Content: Author uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
@@ -2852,7 +2869,7 @@ function municipality_views_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '2';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '3';
   /* Contextual filter: Content: Has taxonomy term ID depth modifier */
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['id'] = 'term_node_tid_depth_modifier';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['table'] = 'node';
