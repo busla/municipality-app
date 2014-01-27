@@ -342,6 +342,7 @@ features[variable][] = social_media_links_appearance
 features[variable][] = social_media_links_icon_style
 features[variable][] = social_media_links_link_attributes
 features[variable][] = social_media_links_platforms
+features[variable][] = taxonomy_menu_sync_category
 features[variable][] = taxonomy_menu_term_item_description_category
 features[variable][] = taxonomy_menu_term_item_description_municipality_settings
 features[variable][] = taxonomy_menu_voc_item_category

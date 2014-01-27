@@ -1833,6 +1833,13 @@ function municipality_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_sync_category';
+  $strongarm->value = 0;
+  $export['taxonomy_menu_sync_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'taxonomy_menu_term_item_description_category';
   $strongarm->value = 0;
   $export['taxonomy_menu_term_item_description_category'] = $strongarm;

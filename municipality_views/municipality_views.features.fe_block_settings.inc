@@ -86,7 +86,33 @@ function municipality_views_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Opnunartími',
+    'title' => 'Opnunartími skrifstofu',
+    'visibility' => 0,
+  );
+
+  $export['block-velkominn'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'velkominn',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'skeidgnup_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'skeidgnup_theme',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Velkominn',
     'visibility' => 0,
   );
 
@@ -158,8 +184,8 @@ function municipality_views_default_fe_block_settings() {
         'weight' => 0,
       ),
       'skeidgnup_theme' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'footer',
+        'status' => 1,
         'theme' => 'skeidgnup_theme',
         'weight' => -16,
       ),
@@ -210,8 +236,8 @@ function municipality_views_default_fe_block_settings() {
         'weight' => 10,
       ),
       'skeidgnup_theme' => array(
-        'region' => 'footer',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'skeidgnup_theme',
         'weight' => 10,
       ),
