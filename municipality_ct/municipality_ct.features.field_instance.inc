@@ -1130,7 +1130,7 @@ function municipality_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'mupload',
+      'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -1162,7 +1162,7 @@ function municipality_ct_field_default_field_instances() {
         ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_mupload',
+      'type' => 'media_generic',
       'weight' => 5,
     ),
   );
