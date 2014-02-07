@@ -268,6 +268,10 @@ function municipality_views_strongarm() {
   $strongarm->value = array(
     'archive' => FALSE,
     'taxonomy_term' => TRUE,
+    'workbench_current_user' => TRUE,
+    'workbench_edited' => TRUE,
+    'workbench_recent_content' => TRUE,
+    'workbench_files' => TRUE,
   );
   $export['views_defaults'] = $strongarm;
 
