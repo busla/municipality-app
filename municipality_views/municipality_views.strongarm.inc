@@ -268,10 +268,13 @@ function municipality_views_strongarm() {
   $strongarm->value = array(
     'archive' => FALSE,
     'taxonomy_term' => TRUE,
-    'workbench_current_user' => TRUE,
-    'workbench_edited' => TRUE,
-    'workbench_recent_content' => TRUE,
-    'workbench_files' => TRUE,
+    'workbench_current_user' => FALSE,
+    'workbench_edited' => FALSE,
+    'workbench_files' => FALSE,
+    'clone_of_workbench_current_user' => TRUE,
+    'clone_of_workbench_edits_by_user' => TRUE,
+    'clone_of_workbench_recent_content' => TRUE,
+    'clone_of_workbench_files' => TRUE,
   );
   $export['views_defaults'] = $strongarm;
 
